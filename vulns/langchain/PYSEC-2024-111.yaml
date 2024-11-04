@@ -8,6 +8,7 @@ aliases:
 - CVE-2024-7774
 modified: '2024-11-04T19:21:44.834949Z'
 published: '2024-10-29T13:15:00Z'
+withdrawn: '2024-11-04T21:54:00Z'
 references:
 - type: EVIDENCE
   url: https://huntr.com/bounties/8fe40685-b714-4191-af7a-3de5e5628cee
