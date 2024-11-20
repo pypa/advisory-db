@@ -1,6 +1,7 @@
 id: PYSEC-2024-27
 modified: 2024-02-06T20:20:19.010821Z
 published: 2024-01-30T01:15:00Z
+withdrawn: 2024-11-20T09:19.00Z
 aliases:
 - CVE-2023-51982
 details: CrateDB 5.5.1 is contains an authentication bypass vulnerability in the Admin
