@@ -1,0 +1,99 @@
+id: PYSEC-2017-114
+modified: 2024-11-21T14:22:45.305089Z
+published: 2017-08-31T22:29:00Z
+aliases:
+- CVE-2015-5695
+details: Designate 2015.1.0 through 1.0.0.0b1 as packaged in OpenStack Kilo does not
+  enforce RecordSets per domain, and Records per RecordSet quotas when processing
+  an internal zone file transfer, which might allow remote attackers to cause a denial
+  of service (infinite loop) via a crafted resource record set.
+affected:
+- package:
+    ecosystem: PyPI
+    name: designate
+    purl: pkg:pypi/designate
+  ranges:
+  - type: ECOSYSTEM
+    events:
+    - introduced: "0"
+  versions:
+  - 10.0.0
+  - 10.0.0.0rc1
+  - 10.0.0.0rc2
+  - 10.0.1
+  - 10.0.2
+  - 11.0.0
+  - 11.0.0.0rc1
+  - 11.0.1
+  - 11.0.2
+  - 12.0.0
+  - 12.0.0.0rc1
+  - 12.0.1
+  - 12.1.0
+  - 13.0.0
+  - 13.0.0.0rc1
+  - 13.0.1
+  - 13.0.2
+  - 14.0.0
+  - 14.0.0.0rc1
+  - 14.0.1
+  - 14.0.2
+  - 14.0.3
+  - 14.0.4
+  - 15.0.0
+  - 15.0.0.0rc1
+  - 15.0.0.0rc2
+  - 15.0.1
+  - 15.0.2
+  - 16.0.0
+  - 16.0.0.0rc1
+  - 16.0.1
+  - 16.0.2
+  - 17.0.0
+  - 17.0.0.0rc1
+  - 17.0.0.0rc2
+  - 17.0.1
+  - 18.0.0
+  - 18.0.0.0rc1
+  - 19.0.0
+  - 19.0.0.0rc1
+  - 2015.1.0b2
+  - 5.0.3
+  - 7.0.1
+  - 8.0.0
+  - 8.0.0.0rc1
+  - 8.0.1
+  - 9.0.0
+  - 9.0.0.0rc1
+  - 9.0.1
+  - 9.0.2
+severity:
+- type: CVSS_V3
+  score: CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H
+references:
+- type: ARTICLE
+  url: https://launchpadlibrarian.net/211525251/bug-1471161-quotas-master.patch
+- type: FIX
+  url: https://launchpadlibrarian.net/211525251/bug-1471161-quotas-master.patch
+- type: WEB
+  url: https://launchpadlibrarian.net/211525251/bug-1471161-quotas-master.patch
+- type: REPORT
+  url: https://bugzilla.redhat.com/show_bug.cgi?id=1245241
+- type: EVIDENCE
+  url: https://bugs.launchpad.net/designate/+bug/1471161
+- type: REPORT
+  url: https://bugs.launchpad.net/designate/+bug/1471161
+- type: WEB
+  url: https://bugs.launchpad.net/designate/+bug/1471161
+- type: ARTICLE
+  url: http://www.openwall.com/lists/oss-security/2015/07/29/6
+- type: WEB
+  url: http://www.openwall.com/lists/oss-security/2015/07/29/6
+- type: ARTICLE
+  url: http://www.openwall.com/lists/oss-security/2015/07/28/11
+- type: WEB
+  url: http://www.openwall.com/lists/oss-security/2015/07/28/11
+- type: FIX
+  url: http://lists.openstack.org/pipermail/openstack/2015-July/013548.html
+- type: ADVISORY
+  url: http://lists.openstack.org/pipermail/openstack/2015-July/013548.html

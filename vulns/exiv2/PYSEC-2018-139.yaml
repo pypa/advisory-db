@@ -1,0 +1,69 @@
+id: PYSEC-2018-139
+modified: 2024-11-21T14:22:48.850406Z
+published: 2018-09-28T09:29:00Z
+aliases:
+- CVE-2018-17581
+details: CiffDirectory::readDirectory() at crwimage_int.cpp in Exiv2 0.26 has excessive
+  stack consumption due to a recursive function, leading to Denial of service.
+affected:
+- package:
+    ecosystem: PyPI
+    name: exiv2
+    purl: pkg:pypi/exiv2
+  ranges:
+  - type: ECOSYSTEM
+    events:
+    - introduced: "0"
+  versions:
+  - "0.1"
+  - 0.11.0
+  - 0.11.1
+  - 0.11.2
+  - 0.11.3
+  - 0.12.0
+  - 0.12.1
+  - 0.13.0
+  - 0.13.1
+  - 0.13.2
+  - 0.14.0
+  - 0.14.1
+  - 0.15.0
+  - 0.16.0
+  - 0.16.1
+  - 0.16.2
+  - 0.16.2.post1
+  - 0.16.3
+  - 0.16.3.post1
+  - 0.17.0
+  - 0.17.1
+  - "0.2"
+  - "0.3"
+  - 0.3.1
+severity:
+- type: CVSS_V3
+  score: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H
+references:
+- type: EVIDENCE
+  url: https://github.com/SegfaultMasters/covering360/blob/master/Exiv2
+- type: FIX
+  url: https://github.com/SegfaultMasters/covering360/blob/master/Exiv2
+- type: WEB
+  url: https://github.com/SegfaultMasters/covering360/blob/master/Exiv2
+- type: EVIDENCE
+  url: https://github.com/Exiv2/exiv2/issues/460
+- type: FIX
+  url: https://github.com/Exiv2/exiv2/issues/460
+- type: REPORT
+  url: https://github.com/Exiv2/exiv2/issues/460
+- type: WEB
+  url: https://usn.ubuntu.com/3852-1/
+- type: ARTICLE
+  url: https://lists.debian.org/debian-lts-announce/2019/02/msg00038.html
+- type: WEB
+  url: https://lists.debian.org/debian-lts-announce/2019/02/msg00038.html
+- type: ADVISORY
+  url: https://access.redhat.com/errata/RHSA-2019:2101
+- type: ARTICLE
+  url: https://lists.debian.org/debian-lts-announce/2023/01/msg00004.html
+- type: WEB
+  url: https://lists.debian.org/debian-lts-announce/2023/01/msg00004.html

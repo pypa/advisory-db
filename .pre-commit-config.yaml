@@ -1,0 +1,7 @@
+repos:
+- repo: https://github.com/python-jsonschema/check-jsonschema
+  rev: 0.23.3
+  hooks:
+  - id: check-jsonschema
+    files: "^vulns/[a-z0-9_-]+/.+\\.yaml"
+    args: [--schemafile, "./.github/osv-schema.json"]

@@ -1,0 +1,53 @@
+id: PYSEC-2008-12
+modified: 2024-11-21T14:22:55.213739Z
+published: 2008-04-25T06:05:00Z
+aliases:
+- CVE-2008-1937
+details: The user form processing (userform.py) in MoinMoin before 1.6.3, when using
+  ACLs or a non-empty superusers list, does not properly manage users, which allows
+  remote attackers to gain privileges.
+affected:
+- package:
+    ecosystem: PyPI
+    name: moin
+    purl: pkg:pypi/moin
+  ranges:
+  - type: ECOSYSTEM
+    events:
+    - introduced: "0"
+  versions:
+  - 1.8.4
+  - 1.8.5
+  - 1.8.6
+  - 1.8.7
+  - 1.9.0
+  - 1.9.1
+  - 1.9.10
+  - 1.9.11
+  - 1.9.2
+  - 1.9.3
+  - 1.9.4
+  - 1.9.5
+  - 1.9.6
+  - 1.9.7
+  - 1.9.8
+  - 1.9.9
+  - 2.0.0a1
+  - 2.0.0b1
+references:
+- type: EVIDENCE
+  url: http://hg.moinmo.in/moin/1.6/rev/f405012e67af
+- type: WEB
+  url: http://moinmo.in/SecurityFixes
+- type: FIX
+  url: http://www.securityfocus.com/bid/28869
+- type: ADVISORY
+  url: http://secunia.com/advisories/29894
+- type: ADVISORY
+  url: http://security.gentoo.org/glsa/glsa-200805-09.xml
+- type: ADVISORY
+  url: http://secunia.com/advisories/30160
+- type: ADVISORY
+  url: http://www.vupen.com/english/advisories/2008/1307/references
+- type: WEB
+  url: https://exchange.xforce.ibmcloud.com/vulnerabilities/41909

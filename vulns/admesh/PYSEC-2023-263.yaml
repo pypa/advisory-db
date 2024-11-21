@@ -1,0 +1,46 @@
+id: PYSEC-2023-263
+modified: 2024-11-21T14:22:40.308634Z
+published: 2023-04-03T16:15:00Z
+aliases:
+- CVE-2022-38072
+details: An improper array index validation vulnerability exists in the stl_fix_normal_directions
+  functionality of ADMesh Master Commit 767a105 and v0.98.4. A specially-crafted stl
+  file can lead to a heap buffer overflow. An attacker can provide a malicious file
+  to trigger this vulnerability.
+affected:
+- package:
+    ecosystem: PyPI
+    name: admesh
+    purl: pkg:pypi/admesh
+  ranges:
+  - type: GIT
+    events:
+    - introduced: "0"
+    - fixed: 5fab257268a0ee6f832c18d72af89810a29fbd5f
+    repo: https://github.com/admesh/admesh
+  - type: ECOSYSTEM
+    events:
+    - introduced: "0"
+  versions:
+  - "0.96"
+  - "0.98"
+  - 0.98.1
+  - 0.98.2
+  - 0.98.3
+  - 0.98.4
+  - 0.98.5
+  - 0.98.6
+  - 0.98.7
+  - 0.98.8
+  - 0.98.9
+  - 0.98a1
+severity:
+- type: CVSS_V3
+  score: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
+references:
+- type: EVIDENCE
+  url: https://talosintelligence.com/vulnerability_reports/TALOS-2022-1594
+- type: WEB
+  url: https://talosintelligence.com/vulnerability_reports/TALOS-2022-1594
+- type: FIX
+  url: https://github.com/admesh/admesh/commit/5fab257268a0ee6f832c18d72af89810a29fbd5f

@@ -1,0 +1,38 @@
+id: PYSEC-2022-43132
+modified: 2024-11-21T14:22:45.610409Z
+published: 2022-06-24T21:15:00Z
+aliases:
+- CVE-2022-34053
+details: The DR-Web-Engine package in PyPI v0.2.0b0 was discovered to contain a code
+  execution backdoor via the request package. This vulnerability allows attackers
+  to access sensitive user information and digital currency keys, as well as escalate
+  privileges.
+affected:
+- package:
+    ecosystem: PyPI
+    name: dr-web-engine
+    purl: pkg:pypi/dr-web-engine
+  ranges:
+  - type: ECOSYSTEM
+    events:
+    - introduced: "0"
+  versions:
+  - 0.2.7.1b0
+  - 0.2.7.2b0
+  - 0.3.0.0b0
+  - 0.3.1.0b0
+  - 0.3.2.0b0
+  - 0.3.2.1b0
+  - 0.3.2.2b0
+severity:
+- type: CVSS_V3
+  score: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
+references:
+- type: WEB
+  url: http://pypi.doubanio.com/simple/request
+- type: PACKAGE
+  url: https://pypi.org/project/dr-web-engine/
+- type: EVIDENCE
+  url: https://github.com/ylliprifti/dr-web-engine/issues/4
+- type: REPORT
+  url: https://github.com/ylliprifti/dr-web-engine/issues/4

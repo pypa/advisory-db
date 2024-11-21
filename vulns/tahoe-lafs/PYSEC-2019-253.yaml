@@ -1,0 +1,59 @@
+id: PYSEC-2019-253
+modified: 2024-11-21T14:23:01.477737Z
+published: 2019-11-07T18:15:00Z
+aliases:
+- CVE-2012-0051
+details: Tahoe-LAFS 1.9.0 fails to ensure integrity which allows remote attackers
+  to corrupt mutable files or directories upon retrieval.
+affected:
+- package:
+    ecosystem: PyPI
+    name: tahoe-lafs
+    purl: pkg:pypi/tahoe-lafs
+  ranges:
+  - type: ECOSYSTEM
+    events:
+    - introduced: "0"
+  versions:
+  - "0"
+  - 1.11.0
+  - 1.12.0
+  - 1.12.1
+  - 1.13.0
+  - 1.14.0
+  - 1.15.1
+  - 1.16.0
+  - 1.17.0
+  - 1.17.1
+  - 1.18.0
+  - 1.19.0
+severity:
+- type: CVSS_V3
+  score: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N
+references:
+- type: EVIDENCE
+  url: http://www.openwall.com/lists/oss-security/2012/01/15/11
+- type: ARTICLE
+  url: http://www.openwall.com/lists/oss-security/2012/01/15/11
+- type: WEB
+  url: http://www.openwall.com/lists/oss-security/2012/01/15/11
+- type: ARTICLE
+  url: http://www.openwall.com/lists/oss-security/2012/01/26/7
+- type: WEB
+  url: http://www.openwall.com/lists/oss-security/2012/01/26/7
+- type: EVIDENCE
+  url: https://tahoe-lafs.org/trac/tahoe-lafs/ticket/1654
+- type: REPORT
+  url: https://tahoe-lafs.org/trac/tahoe-lafs/ticket/1654
+- type: ADVISORY
+  url: https://tahoe-lafs.org/trac/tahoe-lafs/ticket/1654
+- type: ARTICLE
+  url: http://www.openwall.com/lists/oss-security/2012/01/26/8
+- type: WEB
+  url: http://www.openwall.com/lists/oss-security/2012/01/26/8
+- type: WEB
+  url: https://security-tracker.debian.org/tracker/CVE-2012-0051
+- type: ARTICLE
+  url: http://www.openwall.com/lists/oss-security/2012/01/26/9
+- type: WEB
+  url: http://www.openwall.com/lists/oss-security/2012/01/26/9

@@ -1,0 +1,59 @@
+id: PYSEC-2019-247
+modified: 2024-11-21T14:22:49.656989Z
+published: 2019-10-09T19:15:00Z
+aliases:
+- CVE-2019-17402
+details: Exiv2 0.27.2 allows attackers to trigger a crash in Exiv2::getULong in types.cpp
+  when called from Exiv2::Internal::CiffDirectory::readDirectory in crwimage_int.cpp,
+  because there is no validation of the relationship of the total size to the offset
+  and size.
+affected:
+- package:
+    ecosystem: PyPI
+    name: exiv2
+    purl: pkg:pypi/exiv2
+  ranges:
+  - type: ECOSYSTEM
+    events:
+    - introduced: "0"
+  versions:
+  - "0.1"
+  - 0.11.0
+  - 0.11.1
+  - 0.11.2
+  - 0.11.3
+  - 0.12.0
+  - 0.12.1
+  - 0.13.0
+  - 0.13.1
+  - 0.13.2
+  - 0.14.0
+  - 0.14.1
+  - 0.15.0
+  - 0.16.0
+  - 0.16.1
+  - 0.16.2
+  - 0.16.2.post1
+  - 0.16.3
+  - 0.16.3.post1
+  - 0.17.0
+  - 0.17.1
+  - "0.2"
+  - "0.3"
+  - 0.3.1
+severity:
+- type: CVSS_V3
+  score: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H
+references:
+- type: REPORT
+  url: https://github.com/Exiv2/exiv2/issues/1019
+- type: WEB
+  url: https://usn.ubuntu.com/4159-1/
+- type: ARTICLE
+  url: https://lists.debian.org/debian-lts-announce/2019/12/msg00001.html
+- type: WEB
+  url: https://lists.debian.org/debian-lts-announce/2019/12/msg00001.html
+- type: ARTICLE
+  url: https://lists.debian.org/debian-lts-announce/2023/01/msg00004.html
+- type: WEB
+  url: https://lists.debian.org/debian-lts-announce/2023/01/msg00004.html

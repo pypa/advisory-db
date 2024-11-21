@@ -1,0 +1,31 @@
+id: PYSEC-2022-43117
+modified: 2024-11-21T14:22:44.53409Z
+published: 2022-09-19T16:15:00Z
+aliases:
+- CVE-2022-40431
+details: The d8s-pdfs for python, as distributed on PyPI, included a potential code-execution
+  backdoor inserted by a third party. The backdoor is the democritus-networking package.
+  The affected version is 0.1.0.
+affected:
+- package:
+    ecosystem: PyPI
+    name: democritus-networking
+    purl: pkg:pypi/democritus-networking
+  ranges:
+  - type: ECOSYSTEM
+    events:
+    - introduced: "0"
+  versions:
+  - 2021.1.21
+  - 2023.1.21
+  - 2023.1.22
+severity:
+- type: CVSS_V3
+  score: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
+references:
+- type: PACKAGE
+  url: https://pypi.org/project/democritus-networking/
+- type: EVIDENCE
+  url: https://github.com/democritus-project/d8s-pdfs/issues/5
+- type: REPORT
+  url: https://github.com/democritus-project/d8s-pdfs/issues/5

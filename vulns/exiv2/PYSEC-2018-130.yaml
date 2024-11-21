@@ -1,0 +1,58 @@
+id: PYSEC-2018-130
+modified: 2024-11-21T14:22:48.306556Z
+published: 2018-05-29T07:29:00Z
+aliases:
+- CVE-2018-11531
+details: Exiv2 0.26 has a heap-based buffer overflow in getData in preview.cpp.
+affected:
+- package:
+    ecosystem: PyPI
+    name: exiv2
+    purl: pkg:pypi/exiv2
+  ranges:
+  - type: ECOSYSTEM
+    events:
+    - introduced: "0"
+  versions:
+  - "0.1"
+  - 0.11.0
+  - 0.11.1
+  - 0.11.2
+  - 0.11.3
+  - 0.12.0
+  - 0.12.1
+  - 0.13.0
+  - 0.13.1
+  - 0.13.2
+  - 0.14.0
+  - 0.14.1
+  - 0.15.0
+  - 0.16.0
+  - 0.16.1
+  - 0.16.2
+  - 0.16.2.post1
+  - 0.16.3
+  - 0.16.3.post1
+  - 0.17.0
+  - 0.17.1
+  - "0.2"
+  - "0.3"
+  - 0.3.1
+severity:
+- type: CVSS_V3
+  score: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
+references:
+- type: EVIDENCE
+  url: https://github.com/Exiv2/exiv2/issues/283
+- type: REPORT
+  url: https://github.com/Exiv2/exiv2/issues/283
+- type: ARTICLE
+  url: https://lists.debian.org/debian-lts-announce/2018/06/msg00010.html
+- type: WEB
+  url: https://lists.debian.org/debian-lts-announce/2018/06/msg00010.html
+- type: ADVISORY
+  url: https://www.debian.org/security/2018/dsa-4238
+- type: WEB
+  url: https://usn.ubuntu.com/3700-1/
+- type: ADVISORY
+  url: https://security.gentoo.org/glsa/201811-14
