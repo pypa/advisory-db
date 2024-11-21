@@ -1,0 +1,52 @@
+id: PYSEC-2018-134
+modified: 2024-11-21T14:22:48.55081Z
+published: 2018-07-17T12:29:00Z
+aliases:
+- CVE-2018-14338
+details: samples/geotag.cpp in the example code of Exiv2 0.26 misuses the realpath
+  function on POSIX platforms (other than Apple platforms) where glibc is not used,
+  possibly leading to a buffer overflow.
+affected:
+- package:
+    ecosystem: PyPI
+    name: exiv2
+    purl: pkg:pypi/exiv2
+  ranges:
+  - type: ECOSYSTEM
+    events:
+    - introduced: "0"
+  versions:
+  - "0.1"
+  - 0.11.0
+  - 0.11.1
+  - 0.11.2
+  - 0.11.3
+  - 0.12.0
+  - 0.12.1
+  - 0.13.0
+  - 0.13.1
+  - 0.13.2
+  - 0.14.0
+  - 0.14.1
+  - 0.15.0
+  - 0.16.0
+  - 0.16.1
+  - 0.16.2
+  - 0.16.2.post1
+  - 0.16.3
+  - 0.16.3.post1
+  - 0.17.0
+  - 0.17.1
+  - "0.2"
+  - "0.3"
+  - 0.3.1
+severity:
+- type: CVSS_V3
+  score: CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H
+references:
+- type: EVIDENCE
+  url: https://github.com/Exiv2/exiv2/issues/382
+- type: FIX
+  url: https://github.com/Exiv2/exiv2/issues/382
+- type: REPORT
+  url: https://github.com/Exiv2/exiv2/issues/382

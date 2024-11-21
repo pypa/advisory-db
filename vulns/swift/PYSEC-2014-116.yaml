@@ -1,0 +1,56 @@
+id: PYSEC-2014-116
+modified: 2024-11-21T14:23:01.425354Z
+published: 2014-01-23T01:55:00Z
+aliases:
+- CVE-2014-0006
+details: The TempURL middleware in OpenStack Object Storage (Swift) 1.4.6 through
+  1.8.0, 1.9.0 through 1.10.0, and 1.11.0 allows remote attackers to obtain secret
+  URLs by leveraging an object name and a timing side-channel attack.
+affected:
+- package:
+    ecosystem: PyPI
+    name: swift
+    purl: pkg:pypi/swift
+  ranges:
+  - type: ECOSYSTEM
+    events:
+    - introduced: "0"
+  versions:
+  - 1.0.2
+  - 2.15.2
+  - 2.17.1
+  - 2.19.1
+  - 2.19.2
+  - 2.20.0
+  - 2.21.0
+  - 2.21.1
+  - 2.22.0
+  - 2.23.0
+  - 2.23.1
+  - 2.23.2
+  - 2.23.3
+  - 2.24.0
+  - 2.25.0
+  - 2.25.1
+  - 2.25.2
+  - 2.26.0
+  - 2.27.0
+  - 2.28.0
+  - 2.28.1
+  - 2.29.0
+  - 2.29.1
+  - 2.29.2
+  - 2.30.0
+  - 2.30.1
+  - 2.31.0
+  - 2.31.1
+  - 2.32.0
+  - 2.33.0
+  - 2.34.0
+references:
+- type: ADVISORY
+  url: https://bugs.launchpad.net/swift/+bug/1265665
+- type: FIX
+  url: http://www.openwall.com/lists/oss-security/2014/01/17/5
+- type: ADVISORY
+  url: http://rhn.redhat.com/errata/RHSA-2014-0232.html

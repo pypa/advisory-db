@@ -1,0 +1,32 @@
+id: PYSEC-2022-43149
+modified: 2024-11-21T14:22:59.412324Z
+published: 2022-09-06T23:15:00Z
+aliases:
+- CVE-2022-38528
+details: Open Asset Import Library (assimp) commit 3c253ca was discovered to contain
+  a segmentation violation via the component Assimp::XFileImporter::CreateMeshes.
+affected:
+- package:
+    ecosystem: PyPI
+    name: pyassimp
+    purl: pkg:pypi/pyassimp
+  ranges:
+  - type: ECOSYSTEM
+    events:
+    - introduced: "0"
+  versions:
+  - "0.1"
+  - "3.3"
+  - 4.1.1
+  - 4.1.2
+  - 4.1.3
+  - 4.1.4
+  - 5.2.5
+severity:
+- type: CVSS_V3
+  score: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H
+references:
+- type: EVIDENCE
+  url: https://github.com/assimp/assimp/issues/4662
+- type: REPORT
+  url: https://github.com/assimp/assimp/issues/4662

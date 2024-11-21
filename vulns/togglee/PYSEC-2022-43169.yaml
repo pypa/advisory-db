@@ -1,0 +1,44 @@
+id: PYSEC-2022-43169
+modified: 2024-11-21T14:23:01.740031Z
+published: 2022-06-24T21:15:00Z
+aliases:
+- CVE-2022-34060
+details: The Togglee package in PyPI version v0.0.8 was discovered to contain a code
+  execution backdoor. This vulnerability allows attackers to access sensitive user
+  information and digital currency keys, as well as escalate privileges.
+affected:
+- package:
+    ecosystem: PyPI
+    name: togglee
+    purl: pkg:pypi/togglee
+  ranges:
+  - type: ECOSYSTEM
+    events:
+    - introduced: "0"
+  versions:
+  - 0.0.1
+  - 0.0.25
+  - 0.0.26
+  - 0.0.27
+  - 0.0.29
+  - 0.0.30
+  - 0.0.34
+  - 0.0.35
+  - 0.0.36
+  - 0.0.37
+  - 0.0.44
+  - 0.0.47
+  - 0.0.8
+  - 1.0.48
+severity:
+- type: CVSS_V3
+  score: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
+references:
+- type: PACKAGE
+  url: https://pypi.org/project/togglee/
+- type: WEB
+  url: http://pypi.doubanio.com/simple/request
+- type: EVIDENCE
+  url: https://github.com/togglee/togglee-python/issues/2
+- type: REPORT
+  url: https://github.com/togglee/togglee-python/issues/2

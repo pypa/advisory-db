@@ -1,0 +1,32 @@
+id: PYSEC-2021-890
+modified: 2024-11-21T14:22:59.907617Z
+published: 2021-12-17T21:15:00Z
+aliases:
+- CVE-2021-41498
+details: Buffer overflow in ajaxsoundstudio.com Pyo &lt and 1.03 in the Server_jack_init
+  function. which allows attackers to conduct Denial of Service attacks by arbitrary
+  constructing a overlong server name.
+affected:
+- package:
+    ecosystem: PyPI
+    name: pyo
+    purl: pkg:pypi/pyo
+  ranges:
+  - type: ECOSYSTEM
+    events:
+    - introduced: "0"
+  versions:
+  - 1.0.0
+  - 1.0.1
+  - 1.0.2
+  - 1.0.3
+  - 1.0.4
+  - 1.0.5
+severity:
+- type: CVSS_V3
+  score: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+references:
+- type: EVIDENCE
+  url: https://github.com/belangeo/pyo/issues/221
+- type: REPORT
+  url: https://github.com/belangeo/pyo/issues/221

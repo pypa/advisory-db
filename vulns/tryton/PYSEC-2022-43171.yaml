@@ -1,0 +1,69 @@
+id: PYSEC-2022-43171
+modified: 2024-11-21T14:23:02.453983Z
+published: 2022-03-10T17:47:00Z
+aliases:
+- CVE-2022-26662
+details: An XML Entity Expansion (XEE) issue was discovered in Tryton Application
+  Platform (Server) 5.x through 5.0.45, 6.x through 6.0.15, and 6.1.x and 6.2.x through
+  6.2.5, and Tryton Application Platform (Command Line Client (proteus)) 5.x through
+  5.0.11, 6.x through 6.0.4, and 6.1.x and 6.2.x through 6.2.1. An unauthenticated
+  user can send a crafted XML-RPC message to consume all the resources of the server.
+affected:
+- package:
+    ecosystem: PyPI
+    name: tryton
+    purl: pkg:pypi/tryton
+  ranges:
+  - type: ECOSYSTEM
+    events:
+    - introduced: 5.0.0
+    - fixed: 5.0.12
+    - introduced: 6.0.0
+    - fixed: 6.0.5
+    - introduced: 6.2.0
+    - fixed: 6.2.2
+    - fixed: 6.2.6
+    - fixed: 6.0.16
+    - fixed: 5.0.46
+  versions:
+  - 5.0.0
+  - 5.0.1
+  - 5.0.10
+  - 5.0.11
+  - 5.0.2
+  - 5.0.3
+  - 5.0.4
+  - 5.0.5
+  - 5.0.6
+  - 5.0.7
+  - 5.0.8
+  - 5.0.9
+  - 6.0.0
+  - 6.0.1
+  - 6.0.2
+  - 6.0.3
+  - 6.0.4
+  - 6.2.0
+  - 6.2.1
+severity:
+- type: CVSS_V3
+  score: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+references:
+- type: ADVISORY
+  url: https://discuss.tryton.org/t/security-release-for-issue11219-and-issue11244/5059
+- type: FIX
+  url: https://bugs.tryton.org/issue11244
+- type: ADVISORY
+  url: https://bugs.tryton.org/issue11244
+- type: ARTICLE
+  url: https://lists.debian.org/debian-lts-announce/2022/03/msg00016.html
+- type: WEB
+  url: https://lists.debian.org/debian-lts-announce/2022/03/msg00016.html
+- type: ARTICLE
+  url: https://lists.debian.org/debian-lts-announce/2022/03/msg00017.html
+- type: WEB
+  url: https://lists.debian.org/debian-lts-announce/2022/03/msg00017.html
+- type: ADVISORY
+  url: https://www.debian.org/security/2022/dsa-5098
+- type: ADVISORY
+  url: https://www.debian.org/security/2022/dsa-5099

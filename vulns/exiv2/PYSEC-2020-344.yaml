@@ -1,0 +1,67 @@
+id: PYSEC-2020-344
+modified: 2024-11-21T14:22:49.729892Z
+published: 2020-01-27T05:15:00Z
+aliases:
+- CVE-2019-20421
+details: In Jp2Image::readMetadata() in jp2image.cpp in Exiv2 0.27.2, an input file
+  can result in an infinite loop and hang, with high CPU consumption. Remote attackers
+  could leverage this vulnerability to cause a denial of service via a crafted file.
+affected:
+- package:
+    ecosystem: PyPI
+    name: exiv2
+    purl: pkg:pypi/exiv2
+  ranges:
+  - type: GIT
+    events:
+    - introduced: "0"
+    - fixed: a82098f4f90cd86297131b5663c3dec6a34470e8
+    repo: https://github.com/Exiv2/exiv2
+  - type: ECOSYSTEM
+    events:
+    - introduced: "0"
+  versions:
+  - "0.1"
+  - 0.11.0
+  - 0.11.1
+  - 0.11.2
+  - 0.11.3
+  - 0.12.0
+  - 0.12.1
+  - 0.13.0
+  - 0.13.1
+  - 0.13.2
+  - 0.14.0
+  - 0.14.1
+  - 0.15.0
+  - 0.16.0
+  - 0.16.1
+  - 0.16.2
+  - 0.16.2.post1
+  - 0.16.3
+  - 0.16.3.post1
+  - 0.17.0
+  - 0.17.1
+  - "0.2"
+  - "0.3"
+  - 0.3.1
+severity:
+- type: CVSS_V3
+  score: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+references:
+- type: FIX
+  url: https://github.com/Exiv2/exiv2/commit/a82098f4f90cd86297131b5663c3dec6a34470e8
+- type: EVIDENCE
+  url: https://github.com/Exiv2/exiv2/issues/1011
+- type: FIX
+  url: https://github.com/Exiv2/exiv2/issues/1011
+- type: REPORT
+  url: https://github.com/Exiv2/exiv2/issues/1011
+- type: WEB
+  url: https://usn.ubuntu.com/4270-1/
+- type: ADVISORY
+  url: https://www.debian.org/security/2021/dsa-4958
+- type: ARTICLE
+  url: https://lists.debian.org/debian-lts-announce/2021/08/msg00028.html
+- type: WEB
+  url: https://lists.debian.org/debian-lts-announce/2021/08/msg00028.html

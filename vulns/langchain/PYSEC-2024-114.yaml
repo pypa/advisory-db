@@ -1,8 +1,4 @@
 id: PYSEC-2024-114
-modified: 2024-10-31T21:22:28.467359Z
-published: 2024-10-29T13:15:00Z
-aliases:
-- CVE-2024-7042
 details: A vulnerability in the GraphCypherQAChain class of langchain-ai/langchainjs
   versions 0.2.5 and all versions with this class allows for prompt injection, leading
   to SQL injection. This vulnerability permits unauthorized data manipulation, data
@@ -11,20 +7,31 @@ details: A vulnerability in the GraphCypherQAChain class of langchain-ai/langcha
   or delete nodes and relationships without proper authorization, extract sensitive
   data, disrupt services, access data across different tenants, and compromise the
   integrity of the database.
+aliases:
+- CVE-2024-7042
+modified: '2024-11-04T19:21:44.923698Z'
+published: '2024-10-29T13:15:00Z'
+references:
+- type: EVIDENCE
+  url: https://huntr.com/bounties/b612defb-1104-4fff-9fef-001ab07c7b2d
+- type: WEB
+  url: https://huntr.com/bounties/b612defb-1104-4fff-9fef-001ab07c7b2d
+- type: FIX
+  url: https://github.com/langchain-ai/langchainjs/commit/615b9d9ab30a2d23a2f95fb8d7acfdf4b41ad7a6
 affected:
 - package:
-    ecosystem: PyPI
     name: langchain
+    ecosystem: PyPI
     purl: pkg:pypi/langchain
   ranges:
   - type: GIT
-    events:
-    - introduced: "0"
-    - fixed: 615b9d9ab30a2d23a2f95fb8d7acfdf4b41ad7a6
     repo: https://github.com/langchain-ai/langchainjs
+    events:
+    - introduced: '0'
+    - fixed: 615b9d9ab30a2d23a2f95fb8d7acfdf4b41ad7a6
   - type: ECOSYSTEM
     events:
-    - introduced: "0"
+    - introduced: '0'
     - fixed: 0.3.1
   versions:
   - 0.0.1
@@ -435,13 +442,7 @@ affected:
   - 0.3.0
   - 0.3.0.dev1
   - 0.3.0.dev2
+  - 0.2.17
 severity:
 - type: CVSS_V3
   score: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-references:
-- type: EVIDENCE
-  url: https://huntr.com/bounties/b612defb-1104-4fff-9fef-001ab07c7b2d
-- type: WEB
-  url: https://huntr.com/bounties/b612defb-1104-4fff-9fef-001ab07c7b2d
-- type: FIX
-  url: https://github.com/langchain-ai/langchainjs/commit/615b9d9ab30a2d23a2f95fb8d7acfdf4b41ad7a6

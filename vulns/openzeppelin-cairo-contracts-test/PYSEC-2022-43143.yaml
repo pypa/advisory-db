@@ -1,0 +1,51 @@
+id: PYSEC-2022-43143
+modified: 2024-11-21T14:22:57.304802Z
+published: 2022-07-15T18:15:00Z
+aliases:
+- CVE-2022-31153
+- GHSA-8mjr-jr5h-q2xr
+details: OpenZeppelin Contracts for Cairo is a library for contract development written
+  in Cairo for StarkNet, a decentralized ZK Rollup. Version 0.2.0 is vulnerable to
+  an error that renders account contracts unusable on live networks. This issue affects
+  all accounts (vanilla and ethereum flavors) in the v0.2.0 release of OpenZeppelin
+  Contracts for Cairo, which are not whitelisted on StarkNet mainnet. Only goerli
+  deployments of v0.2.0 accounts are affected. This faulty behavior is not observed
+  in StarkNet's testing framework. This bug has been patched in v0.2.1.
+affected:
+- package:
+    ecosystem: PyPI
+    name: openzeppelin-cairo-contracts-test
+    purl: pkg:pypi/openzeppelin-cairo-contracts-test
+  ranges:
+  - type: GIT
+    events:
+    - introduced: "0"
+    - fixed: 2cd60279c3332285d47edf9ee3888b71257acdc9
+    repo: https://github.com/OpenZeppelin/cairo-contracts
+  - type: ECOSYSTEM
+    events:
+    - introduced: "0"
+  versions:
+  - 0.1.0
+severity:
+- type: CVSS_V3
+  score: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H
+references:
+- type: EVIDENCE
+  url: https://github.com/OpenZeppelin/cairo-contracts/issues/386
+- type: REPORT
+  url: https://github.com/OpenZeppelin/cairo-contracts/issues/386
+- type: FIX
+  url: https://github.com/OpenZeppelin/cairo-contracts/pull/387
+- type: WEB
+  url: https://github.com/OpenZeppelin/cairo-contracts/pull/387
+- type: FIX
+  url: https://github.com/OpenZeppelin/cairo-contracts/commit/2cd60279c3332285d47edf9ee3888b71257acdc9
+- type: ADVISORY
+  url: https://github.com/OpenZeppelin/cairo-contracts/security/advisories/GHSA-8mjr-jr5h-q2xr
+- type: EVIDENCE
+  url: https://github.com/OpenZeppelin/cairo-contracts/blob/release-0.2.0/src/openzeppelin/account/library.cairo#L203
+- type: WEB
+  url: https://github.com/OpenZeppelin/cairo-contracts/blob/release-0.2.0/src/openzeppelin/account/library.cairo#L203
+- type: WEB
+  url: https://github.com/OpenZeppelin/cairo-contracts/releases/tag/v0.2.1

@@ -1,29 +1,37 @@
 id: PYSEC-2024-115
-modified: 2024-11-01T21:22:08.817704Z
-published: 2024-10-29T13:15:00Z
-aliases:
-- CVE-2024-8309
-details: A vulnerability in the GraphCypherQAChain class of langchain-ai/langchain
+details: A vulnerability in the GraphCypherQAChain class of langchain-ai/langchain-community
   version 0.2.5 allows for SQL injection through prompt injection. This vulnerability
   can lead to unauthorized data manipulation, data exfiltration, denial of service
   (DoS) by deleting all data, breaches in multi-tenant security environments, and
   data integrity issues. Attackers can create, update, or delete nodes and relationships
   without proper authorization, extract sensitive data, disrupt services, access data
   across different tenants, and compromise the integrity of the database.
+aliases:
+- CVE-2024-8309
+modified: '2024-11-12T19:19:57.535206Z'
+published: '2024-11-05T16:04:14Z'
+references:
+- type: EVIDENCE
+  url: https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5
+- type: WEB
+  url: https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5
+- type: FIX
+  url: https://github.com/langchain-ai/langchain/commit/c2a3021bb0c5f54649d380b42a0684ca5778c255
 affected:
 - package:
-    ecosystem: PyPI
     name: langchain
+    ecosystem: PyPI
     purl: pkg:pypi/langchain
   ranges:
   - type: GIT
-    events:
-    - introduced: "0"
-    - fixed: c2a3021bb0c5f54649d380b42a0684ca5778c255
     repo: https://github.com/langchain-ai/langchain
+    events:
+    - introduced: '0'
+    - fixed: c2a3021bb0c5f54649d380b42a0684ca5778c255
   - type: ECOSYSTEM
     events:
-    - introduced: "0"
+    - introduced: '0'
+    - fixed: 0.2.0
   versions:
   - 0.0.1
   - 0.0.10
@@ -411,42 +419,39 @@ affected:
   - 0.1.7
   - 0.1.8
   - 0.1.9
-  - 0.2.0
   - 0.2.0rc1
   - 0.2.0rc2
+- package:
+    name: langchain-community
+    ecosystem: PyPI
+    purl: pkg:pypi/langchain-community
+  ranges:
+  - type: ECOSYSTEM
+    events:
+    - introduced: 0.2.0
+    - fixed: 0.3.0
+  versions:
+  - 0.2.0
   - 0.2.1
-  - 0.2.10
-  - 0.2.11
-  - 0.2.12
-  - 0.2.13
-  - 0.2.14
-  - 0.2.15
-  - 0.2.16
   - 0.2.2
   - 0.2.3
   - 0.2.4
   - 0.2.5
   - 0.2.6
   - 0.2.7
-  - 0.2.8
   - 0.2.9
-  - 0.3.0
+  - 0.2.10
+  - 0.2.11
+  - 0.2.12
+  - 0.2.13
+  - 0.2.15
+  - 0.2.16
+  - 0.2.17
+  - 0.2.18
+  - 0.2.14
   - 0.3.0.dev1
   - 0.3.0.dev2
-  - 0.3.1
-  - 0.3.2
-  - 0.3.3
-  - 0.3.4
-  - 0.3.5
-  - 0.3.6
-  - 0.3.7
+  - 0.2.19
 severity:
 - type: CVSS_V3
   score: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-references:
-- type: EVIDENCE
-  url: https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5
-- type: WEB
-  url: https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5
-- type: FIX
-  url: https://github.com/langchain-ai/langchain/commit/c2a3021bb0c5f54649d380b42a0684ca5778c255
