@@ -1,24 +1,12 @@
-id: PYSEC-2017-147
-modified: 2024-11-21T14:23:00.007173Z
-published: 2017-09-13T16:29:00Z
-aliases:
-- CVE-2017-12612
-details: In Apache Spark 1.6.0 until 2.1.1, the launcher API performs unsafe deserialization
-  of data received by its socket. This makes applications launched programmatically
-  using the launcher API potentially vulnerable to arbitrary code execution by an
-  attacker with access to any user account on the local machine. It does not affect
-  apps run by spark-submit or spark-shell. The attacker would be able to execute code
-  as the user that ran the Spark application. Users are encouraged to update to version
-  2.2.0 or later.
 affected:
 - package:
     ecosystem: PyPI
     name: pyspark
     purl: pkg:pypi/pyspark
   ranges:
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
   versions:
   - 2.1.1
   - 2.1.2
@@ -69,9 +57,18 @@ affected:
   - 3.5.3
   - 4.0.0.dev1
   - 4.0.0.dev2
-severity:
-- type: CVSS_V3
-  score: CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
+aliases:
+- CVE-2017-12612
+details: In Apache Spark 1.6.0 until 2.1.1, the launcher API performs unsafe deserialization
+  of data received by its socket. This makes applications launched programmatically
+  using the launcher API potentially vulnerable to arbitrary code execution by an
+  attacker with access to any user account on the local machine. It does not affect
+  apps run by spark-submit or spark-shell. The attacker would be able to execute code
+  as the user that ran the Spark application. Users are encouraged to update to version
+  2.2.0 or later.
+id: PYSEC-2017-147
+modified: '2024-11-21T14:23:00.007173Z'
+published: '2017-09-13T16:29:00Z'
 references:
 - type: ARTICLE
   url: https://mail-archives.apache.org/mod_mbox/spark-dev/201709.mbox/%3CCAEccTyy-1yYuhdNgkBUg0sr9NeaZSrBKkBePdTNZbxXZNTAR-g%40mail.gmail.com%3E
@@ -81,3 +78,7 @@ references:
   url: http://www.securityfocus.com/bid/100823
 - type: ADVISORY
   url: http://www.securityfocus.com/bid/100823
+severity:
+- score: CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
+  type: CVSS_V3
+withdrawn: '2024-11-22T04:37:05Z'

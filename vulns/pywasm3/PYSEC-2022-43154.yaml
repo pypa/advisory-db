@@ -1,28 +1,25 @@
-id: PYSEC-2022-43154
-modified: 2024-11-21T14:23:00.161107Z
-published: 2022-05-20T19:15:00Z
-aliases:
-- CVE-2022-28990
-details: WASM3 v0.5.0 was discovered to contain a heap overflow via the component
-  /wabt/bin/poc.wasm.
 affected:
 - package:
     ecosystem: PyPI
     name: pywasm3
     purl: pkg:pypi/pywasm3
   ranges:
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
   versions:
   - 0.0.1
   - 0.0.2
   - 0.4.8
   - 0.4.9
   - 0.5.0
-severity:
-- type: CVSS_V3
-  score: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
+aliases:
+- CVE-2022-28990
+details: WASM3 v0.5.0 was discovered to contain a heap overflow via the component
+  /wabt/bin/poc.wasm.
+id: PYSEC-2022-43154
+modified: '2024-11-21T14:23:00.161107Z'
+published: '2022-05-20T19:15:00Z'
 references:
 - type: EVIDENCE
   url: https://github.com/wasm3/wasm3/issues/323
@@ -32,3 +29,7 @@ references:
   url: https://github.com/wasm3/wasm3/pull/324
 - type: WEB
   url: https://github.com/wasm3/wasm3/pull/324
+severity:
+- score: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
+  type: CVSS_V3
+withdrawn: '2024-11-22T04:37:05Z'

@@ -1,19 +1,12 @@
-id: PYSEC-2022-43173
-modified: 2024-11-21T14:23:03.244154Z
-published: 2022-07-22T15:15:00Z
-aliases:
-- CVE-2022-34509
-details: The wikifaces package in PyPI v1.0 included a code execution backdoor inserted
-  by a third party.
 affected:
 - package:
     ecosystem: PyPI
     name: wikifaces
     purl: pkg:pypi/wikifaces
   ranges:
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
   versions:
   - 1.0.1
   - 1.0.2
@@ -22,9 +15,13 @@ affected:
   - 1.0.6
   - 1.0.7
   - 1.0.8
-severity:
-- type: CVSS_V3
-  score: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
+aliases:
+- CVE-2022-34509
+details: The wikifaces package in PyPI v1.0 included a code execution backdoor inserted
+  by a third party.
+id: PYSEC-2022-43173
+modified: '2024-11-21T14:23:03.244154Z'
+published: '2022-07-22T15:15:00Z'
 references:
 - type: REPORT
   url: https://github.com/tford9/Wiki-Faces-Downloader/issues/1
@@ -32,3 +29,7 @@ references:
   url: http://pypi.doubanio.com/simple/request
 - type: PACKAGE
   url: https://pypi.org/project/wikifaces/
+severity:
+- score: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
+  type: CVSS_V3
+withdrawn: '2024-11-22T04:37:05Z'

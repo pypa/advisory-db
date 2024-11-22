@@ -1,24 +1,17 @@
-id: PYSEC-2012-33
-modified: 2024-11-21T14:22:51.786908Z
-published: 2012-06-05T22:55:00Z
-aliases:
-- CVE-2012-2144
-details: Session fixation vulnerability in OpenStack Dashboard (Horizon) folsom-1
-  and 2012.1 allows remote attackers to hijack web sessions via the sessionid cookie.
 affected:
 - package:
     ecosystem: PyPI
     name: horizon
     purl: pkg:pypi/horizon
   ranges:
-  - type: GIT
-    events:
-    - introduced: "0"
+  - events:
+    - introduced: '0'
     - fixed: 041b1c44c7d6cf5429505067c32f8f35166a8bab
     repo: https://github.com/openstack/horizon
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
+    type: GIT
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
   versions:
   - 12.0.2
   - 12.0.3
@@ -108,6 +101,13 @@ affected:
   - 24.0.0
   - 25.0.0
   - 25.1.0
+aliases:
+- CVE-2012-2144
+details: Session fixation vulnerability in OpenStack Dashboard (Horizon) folsom-1
+  and 2012.1 allows remote attackers to hijack web sessions via the sessionid cookie.
+id: PYSEC-2012-33
+modified: '2024-11-21T14:22:51.786908Z'
+published: '2012-06-05T22:55:00Z'
 references:
 - type: WEB
   url: http://www.securityfocus.com/bid/53399
@@ -131,3 +131,4 @@ references:
   url: http://www.osvdb.org/81741
 - type: WEB
   url: https://exchange.xforce.ibmcloud.com/vulnerabilities/75423
+withdrawn: '2024-11-22T04:37:04Z'

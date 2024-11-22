@@ -1,30 +1,27 @@
-id: PYSEC-2022-43148
-modified: 2024-11-21T14:22:59.35793Z
-published: 2022-01-01T00:15:00Z
-aliases:
-- CVE-2021-45948
-details: Open Asset Import Library (aka assimp) 5.1.0 and 5.1.1 has a heap-based buffer
-  overflow in _m3d_safestr (called from m3d_load and Assimp::M3DWrapper::M3DWrapper).
 affected:
 - package:
     ecosystem: PyPI
     name: pyassimp
     purl: pkg:pypi/pyassimp
   ranges:
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
   versions:
-  - "0.1"
-  - "3.3"
+  - '0.1'
+  - '3.3'
   - 4.1.1
   - 4.1.2
   - 4.1.3
   - 4.1.4
   - 5.2.5
-severity:
-- type: CVSS_V3
-  score: CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H
+aliases:
+- CVE-2021-45948
+details: Open Asset Import Library (aka assimp) 5.1.0 and 5.1.1 has a heap-based buffer
+  overflow in _m3d_safestr (called from m3d_load and Assimp::M3DWrapper::M3DWrapper).
+id: PYSEC-2022-43148
+modified: '2024-11-21T14:22:59.35793Z'
+published: '2022-01-01T00:15:00Z'
 references:
 - type: EVIDENCE
   url: https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=34416
@@ -36,3 +33,7 @@ references:
   url: https://github.com/google/oss-fuzz-vulns/blob/main/vulns/assimp/OSV-2021-775.yaml
 - type: ADVISORY
   url: https://security.gentoo.org/glsa/202210-01
+severity:
+- score: CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H
+  type: CVSS_V3
+withdrawn: '2024-11-22T04:37:05Z'

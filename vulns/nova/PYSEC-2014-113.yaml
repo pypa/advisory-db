@@ -1,21 +1,12 @@
-id: PYSEC-2014-113
-modified: 2024-11-21T14:22:56.977165Z
-published: 2014-03-25T16:55:00Z
-aliases:
-- CVE-2014-2573
-details: The VMWare driver in OpenStack Compute (Nova) 2013.2 through 2013.2.2 does
-  not properly put VMs into RESCUE status, which allows remote authenticated users
-  to bypass the quota limit and cause a denial of service (resource consumption) by
-  requesting the VM be put into rescue and then deleting the image.
 affected:
 - package:
     ecosystem: PyPI
     name: nova
     purl: pkg:pypi/nova
   ranges:
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
   versions:
   - 15.1.5
   - 16.1.6
@@ -135,6 +126,15 @@ affected:
   - 29.2.0
   - 30.0.0
   - 30.0.0.0rc1
+aliases:
+- CVE-2014-2573
+details: The VMWare driver in OpenStack Compute (Nova) 2013.2 through 2013.2.2 does
+  not properly put VMs into RESCUE status, which allows remote authenticated users
+  to bypass the quota limit and cause a denial of service (resource consumption) by
+  requesting the VM be put into rescue and then deleting the image.
+id: PYSEC-2014-113
+modified: '2024-11-21T14:22:56.977165Z'
+published: '2014-03-25T16:55:00Z'
 references:
 - type: WEB
   url: http://www.openwall.com/lists/oss-security/2014/03/21/1
@@ -144,3 +144,4 @@ references:
   url: https://bugs.launchpad.net/nova/+bug/1269418
 - type: ADVISORY
   url: http://secunia.com/advisories/57498
+withdrawn: '2024-11-22T04:37:04Z'

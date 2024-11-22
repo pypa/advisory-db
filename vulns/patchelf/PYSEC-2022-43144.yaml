@@ -1,19 +1,12 @@
-id: PYSEC-2022-43144
-modified: 2024-11-21T14:22:58.452456Z
-published: 2022-12-19T22:15:00Z
-aliases:
-- CVE-2022-44940
-details: Patchelf v0.9 was discovered to contain an out-of-bounds read via the function
-  modifyRPath at src/patchelf.cc.
 affected:
 - package:
     ecosystem: PyPI
     name: patchelf
     purl: pkg:pypi/patchelf
   ranges:
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
   versions:
   - 0.11.0.0
   - 0.12.0.0
@@ -30,9 +23,13 @@ affected:
   - 0.17.2.0
   - 0.17.2.1
   - 0.18.0.0
-severity:
-- type: CVSS_V3
-  score: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H
+aliases:
+- CVE-2022-44940
+details: Patchelf v0.9 was discovered to contain an out-of-bounds read via the function
+  modifyRPath at src/patchelf.cc.
+id: PYSEC-2022-43144
+modified: '2024-11-21T14:22:58.452456Z'
+published: '2022-12-19T22:15:00Z'
 references:
 - type: EVIDENCE
   url: https://github.com/NixOS/patchelf/pull/419
@@ -40,3 +37,7 @@ references:
   url: https://github.com/NixOS/patchelf/pull/419
 - type: WEB
   url: https://github.com/NixOS/patchelf/pull/419
+severity:
+- score: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H
+  type: CVSS_V3
+withdrawn: '2024-11-22T04:37:04Z'

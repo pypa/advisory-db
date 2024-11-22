@@ -1,30 +1,31 @@
-id: PYSEC-2022-43155
-modified: 2024-11-21T14:23:00.213494Z
-published: 2022-12-13T23:15:00Z
-aliases:
-- CVE-2022-44874
-details: wasm3 commit 7890a2097569fde845881e0b352d813573e371f9 was discovered to contain
-  a segmentation fault via the component op_CallIndirect at /m3_exec.h.
 affected:
 - package:
     ecosystem: PyPI
     name: pywasm3
     purl: pkg:pypi/pywasm3
   ranges:
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
   versions:
   - 0.0.1
   - 0.0.2
   - 0.4.8
   - 0.4.9
   - 0.5.0
-severity:
-- type: CVSS_V3
-  score: CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H
+aliases:
+- CVE-2022-44874
+details: wasm3 commit 7890a2097569fde845881e0b352d813573e371f9 was discovered to contain
+  a segmentation fault via the component op_CallIndirect at /m3_exec.h.
+id: PYSEC-2022-43155
+modified: '2024-11-21T14:23:00.213494Z'
+published: '2022-12-13T23:15:00Z'
 references:
 - type: EVIDENCE
   url: https://github.com/wasm3/wasm3/issues/380
 - type: REPORT
   url: https://github.com/wasm3/wasm3/issues/380
+severity:
+- score: CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H
+  type: CVSS_V3
+withdrawn: '2024-11-22T04:37:05Z'

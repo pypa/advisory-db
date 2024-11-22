@@ -1,21 +1,14 @@
-id: PYSEC-2017-139
-modified: 2024-11-21T14:22:47.458235Z
-published: 2017-09-29T01:34:00Z
-aliases:
-- CVE-2017-14866
-details: There is a heap-based buffer overflow in the Exiv2::s2Data function of types.cpp
-  in Exiv2 0.26. A Crafted input will lead to a denial of service attack.
 affected:
 - package:
     ecosystem: PyPI
     name: exiv2
     purl: pkg:pypi/exiv2
   ranges:
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
   versions:
-  - "0.1"
+  - '0.1'
   - 0.11.0
   - 0.11.1
   - 0.11.2
@@ -36,14 +29,22 @@ affected:
   - 0.16.3.post1
   - 0.17.0
   - 0.17.1
-  - "0.2"
-  - "0.3"
+  - '0.2'
+  - '0.3'
   - 0.3.1
-severity:
-- type: CVSS_V3
-  score: CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H
+aliases:
+- CVE-2017-14866
+details: There is a heap-based buffer overflow in the Exiv2::s2Data function of types.cpp
+  in Exiv2 0.26. A Crafted input will lead to a denial of service attack.
+id: PYSEC-2017-139
+modified: '2024-11-21T14:22:47.458235Z'
+published: '2017-09-29T01:34:00Z'
 references:
 - type: EVIDENCE
   url: https://bugzilla.redhat.com/show_bug.cgi?id=1494781
 - type: REPORT
   url: https://bugzilla.redhat.com/show_bug.cgi?id=1494781
+severity:
+- score: CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H
+  type: CVSS_V3
+withdrawn: '2024-11-22T04:37:04Z'

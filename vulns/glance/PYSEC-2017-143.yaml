@@ -1,20 +1,12 @@
-id: PYSEC-2017-143
-modified: 2024-11-21T14:22:51.45285Z
-published: 2017-03-29T14:59:00Z
-aliases:
-- CVE-2015-8234
-details: The image signature algorithm in OpenStack Glance 11.0.0 allows remote attackers
-  to bypass the signature verification process via a crafted image, which triggers
-  an MD5 collision.
 affected:
 - package:
     ecosystem: PyPI
     name: glance
     purl: pkg:pypi/glance
   ranges:
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
   versions:
   - 15.0.2
   - 17.0.1
@@ -87,9 +79,14 @@ affected:
   - 29.0.0.0b2
   - 29.0.0.0b3
   - 29.0.0.0rc1
-severity:
-- type: CVSS_V3
-  score: CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N
+aliases:
+- CVE-2015-8234
+details: The image signature algorithm in OpenStack Glance 11.0.0 allows remote attackers
+  to bypass the signature verification process via a crafted image, which triggers
+  an MD5 collision.
+id: PYSEC-2017-143
+modified: '2024-11-21T14:22:51.45285Z'
+published: '2017-03-29T14:59:00Z'
 references:
 - type: WEB
   url: https://wiki.openstack.org/wiki/OSSN/OSSN-0061
@@ -103,3 +100,7 @@ references:
   url: http://seclists.org/oss-sec/2015/q4/303
 - type: WEB
   url: http://seclists.org/oss-sec/2015/q4/303
+severity:
+- score: CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N
+  type: CVSS_V3
+withdrawn: '2024-11-22T04:37:04Z'

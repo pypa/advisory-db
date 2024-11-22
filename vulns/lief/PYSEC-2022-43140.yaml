@@ -1,20 +1,12 @@
-id: PYSEC-2022-43140
-modified: 2024-11-21T14:22:54.027776Z
-published: 2022-11-17T23:15:00Z
-aliases:
-- CVE-2022-43171
-details: A heap buffer overflow in the LIEF::MachO::BinaryParser::parse_dyldinfo_generic_bind
-  function of LIEF v0.12.1 allows attackers to cause a Denial of Service (DoS) via
-  a crafted MachO file.
 affected:
 - package:
     ecosystem: PyPI
     name: lief
     purl: pkg:pypi/lief
   ranges:
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
   versions:
   - 0.10.0
   - 0.10.1
@@ -40,9 +32,14 @@ affected:
   - 0.8.2
   - 0.8.3
   - 0.9.0
-severity:
-- type: CVSS_V3
-  score: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H
+aliases:
+- CVE-2022-43171
+details: A heap buffer overflow in the LIEF::MachO::BinaryParser::parse_dyldinfo_generic_bind
+  function of LIEF v0.12.1 allows attackers to cause a Denial of Service (DoS) via
+  a crafted MachO file.
+id: PYSEC-2022-43140
+modified: '2024-11-21T14:22:54.027776Z'
+published: '2022-11-17T23:15:00Z'
 references:
 - type: EVIDENCE
   url: https://github.com/lief-project/LIEF/issues/782
@@ -50,3 +47,7 @@ references:
   url: https://github.com/lief-project/LIEF/issues/782
 - type: REPORT
   url: https://github.com/lief-project/LIEF/issues/782
+severity:
+- score: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H
+  type: CVSS_V3
+withdrawn: '2024-11-22T04:37:04Z'

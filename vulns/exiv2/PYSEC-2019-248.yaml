@@ -1,23 +1,14 @@
-id: PYSEC-2019-248
-modified: 2024-11-21T14:22:49.79084Z
-published: 2019-02-25T15:29:00Z
-aliases:
-- CVE-2019-9143
-details: An issue was discovered in Exiv2 0.27. There is infinite recursion at Exiv2::Image::printTiffStructure
-  in the file image.cpp. This can be triggered by a crafted file. It allows an attacker
-  to cause Denial of Service (Segmentation fault) or possibly have unspecified other
-  impact.
 affected:
 - package:
     ecosystem: PyPI
     name: exiv2
     purl: pkg:pypi/exiv2
   ranges:
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
   versions:
-  - "0.1"
+  - '0.1'
   - 0.11.0
   - 0.11.1
   - 0.11.2
@@ -38,12 +29,18 @@ affected:
   - 0.16.3.post1
   - 0.17.0
   - 0.17.1
-  - "0.2"
-  - "0.3"
+  - '0.2'
+  - '0.3'
   - 0.3.1
-severity:
-- type: CVSS_V3
-  score: CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
+aliases:
+- CVE-2019-9143
+details: An issue was discovered in Exiv2 0.27. There is infinite recursion at Exiv2::Image::printTiffStructure
+  in the file image.cpp. This can be triggered by a crafted file. It allows an attacker
+  to cause Denial of Service (Segmentation fault) or possibly have unspecified other
+  impact.
+id: PYSEC-2019-248
+modified: '2024-11-21T14:22:49.79084Z'
+published: '2019-02-25T15:29:00Z'
 references:
 - type: EVIDENCE
   url: https://research.loginsoft.com/bugs/uncontrolled-recursion-loop-in-exiv2imageprinttiffstructure-exiv2-0-27/
@@ -57,3 +54,7 @@ references:
   url: http://www.securityfocus.com/bid/107161
 - type: ADVISORY
   url: http://www.securityfocus.com/bid/107161
+severity:
+- score: CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
+  type: CVSS_V3
+withdrawn: '2024-11-22T04:37:04Z'

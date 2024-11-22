@@ -1,21 +1,12 @@
-id: PYSEC-2014-108
-modified: 2024-11-21T14:22:52.84065Z
-published: 2014-08-25T14:55:00Z
-aliases:
-- CVE-2014-5252
-details: The V3 API in OpenStack Identity (Keystone) 2014.1.x before 2014.1.2.1 and
-  Juno before Juno-3 updates the issued_at value for UUID v2 tokens, which allows
-  remote authenticated users to bypass the token expiration and retain access via
-  a verification (1) GET or (2) HEAD request to v3/auth/tokens/.
 affected:
 - package:
     ecosystem: PyPI
     name: keystone
     purl: pkg:pypi/keystone
   ranges:
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
   versions:
   - 12.0.2
   - 12.0.3
@@ -66,6 +57,15 @@ affected:
   - 25.0.0.0rc1
   - 26.0.0
   - 26.0.0.0rc1
+aliases:
+- CVE-2014-5252
+details: The V3 API in OpenStack Identity (Keystone) 2014.1.x before 2014.1.2.1 and
+  Juno before Juno-3 updates the issued_at value for UUID v2 tokens, which allows
+  remote authenticated users to bypass the token expiration and retain access via
+  a verification (1) GET or (2) HEAD request to v3/auth/tokens/.
+id: PYSEC-2014-108
+modified: '2024-11-21T14:22:52.84065Z'
+published: '2014-08-25T14:55:00Z'
 references:
 - type: WEB
   url: http://www.openwall.com/lists/oss-security/2014/08/15/6
@@ -77,3 +77,4 @@ references:
   url: http://rhn.redhat.com/errata/RHSA-2014-1121.html
 - type: ADVISORY
   url: http://rhn.redhat.com/errata/RHSA-2014-1122.html
+withdrawn: '2024-11-22T04:37:04Z'

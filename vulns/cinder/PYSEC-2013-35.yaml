@@ -1,20 +1,12 @@
-id: PYSEC-2013-35
-modified: 2024-11-21T14:22:42.067708Z
-published: 2013-09-16T19:14:00Z
-aliases:
-- CVE-2013-4183
-details: The clear_volume function in LVMVolumeDriver driver in OpenStack Cinder 2013.1.1
-  through 2013.1.2 does not properly clear data when deleting a snapshot, which allows
-  local users to obtain sensitive information via unspecified vectors.
 affected:
 - package:
     ecosystem: PyPI
     name: cinder
     purl: pkg:pypi/cinder
   ranges:
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
   versions:
   - 10.0.8
   - 11.2.0
@@ -132,6 +124,14 @@ affected:
   - 25.0.0
   - 25.0.0.0rc1
   - 25.0.0.0rc2
+aliases:
+- CVE-2013-4183
+details: The clear_volume function in LVMVolumeDriver driver in OpenStack Cinder 2013.1.1
+  through 2013.1.2 does not properly clear data when deleting a snapshot, which allows
+  local users to obtain sensitive information via unspecified vectors.
+id: PYSEC-2013-35
+modified: '2024-11-21T14:22:42.067708Z'
+published: '2013-09-16T19:14:00Z'
 references:
 - type: FIX
   url: http://rhn.redhat.com/errata/RHSA-2013-1198.html
@@ -141,3 +141,4 @@ references:
   url: https://bugs.launchpad.net/cinder/+bug/1198185
 - type: ADVISORY
   url: http://www.ubuntu.com/usn/USN-2005-1
+withdrawn: '2024-11-22T04:37:03Z'

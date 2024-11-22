@@ -1,6 +1,14 @@
-id: PYSEC-2012-26
-modified: 2024-11-21T14:22:41.220887Z
-published: 2012-03-21T10:11:00Z
+affected:
+- package:
+    ecosystem: PyPI
+    name: bitdefender
+    purl: pkg:pypi/bitdefender
+  ranges:
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
+  versions:
+  - 0.0.1
 aliases:
 - CVE-2012-1459
 details: 'The TAR file parser in AhnLab V3 Internet Security 2011.01.18.00, Avira
@@ -21,17 +29,9 @@ details: 'The TAR file parser in AhnLab V3 Internet Security 2011.01.18.00, Avir
   entry, plus part of the header of the next entry.  NOTE: this may later be SPLIT
   into multiple CVEs if additional information is published showing that the error
   occurred independently in different TAR parser implementations.'
-affected:
-- package:
-    ecosystem: PyPI
-    name: bitdefender
-    purl: pkg:pypi/bitdefender
-  ranges:
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
-  versions:
-  - 0.0.1
+id: PYSEC-2012-26
+modified: '2024-11-21T14:22:41.220887Z'
+published: '2012-03-21T10:11:00Z'
 references:
 - type: WEB
   url: http://www.securityfocus.com/archive/1/522005
@@ -67,3 +67,4 @@ references:
   url: https://exchange.xforce.ibmcloud.com/vulnerabilities/74302
 - type: ADVISORY
   url: http://www.mandriva.com/security/advisories?name=MDVSA-2012:094
+withdrawn: '2024-11-22T04:37:03Z'

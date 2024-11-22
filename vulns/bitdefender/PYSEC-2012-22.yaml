@@ -1,6 +1,14 @@
-id: PYSEC-2012-22
-modified: 2024-11-21T14:22:41.00719Z
-published: 2012-03-21T10:11:00Z
+affected:
+- package:
+    ecosystem: PyPI
+    name: bitdefender
+    purl: pkg:pypi/bitdefender
+  ranges:
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
+  versions:
+  - 0.0.1
 aliases:
 - CVE-2012-1430
 details: 'The ELF file parser in Bitdefender 7.2, Comodo Antivirus 7424, eSafe 7.0.17.0,
@@ -11,19 +19,12 @@ details: 'The ELF file parser in Bitdefender 7.2, Comodo Antivirus 7424, eSafe 7
   at a certain location.  NOTE: this may later be SPLIT into multiple CVEs if additional
   information is published showing that the error occurred independently in different
   ELF parser implementations.'
-affected:
-- package:
-    ecosystem: PyPI
-    name: bitdefender
-    purl: pkg:pypi/bitdefender
-  ranges:
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
-  versions:
-  - 0.0.1
+id: PYSEC-2012-22
+modified: '2024-11-21T14:22:41.00719Z'
+published: '2012-03-21T10:11:00Z'
 references:
 - type: WEB
   url: http://www.securityfocus.com/archive/1/522005
 - type: WEB
   url: http://www.ieee-security.org/TC/SP2012/program.html
+withdrawn: '2024-11-22T04:37:03Z'

@@ -1,27 +1,18 @@
-id: PYSEC-2012-37
-modified: 2024-11-21T14:22:55.891133Z
-published: 2012-06-21T15:55:00Z
-aliases:
-- CVE-2012-2654
-details: The (1) EC2 and (2) OS APIs in OpenStack Compute (Nova) Folsom (2012.2),
-  Essex (2012.1), and Diablo (2011.3) do not properly check the protocol when security
-  groups are created and the network protocol is not specified entirely in lowercase,
-  which allows remote attackers to bypass intended access restrictions.
 affected:
 - package:
     ecosystem: PyPI
     name: nova
     purl: pkg:pypi/nova
   ranges:
-  - type: GIT
-    events:
-    - introduced: "0"
+  - events:
+    - introduced: '0'
     - fixed: 9f9e9da777161426a6f8cb4314b78e09beac2978
     - fixed: ff06c7c885dc94ed7c828e8cdbb8b5d850a7e654
     repo: https://github.com/openstack/nova
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
+    type: GIT
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
   versions:
   - 15.1.5
   - 16.1.6
@@ -141,6 +132,15 @@ affected:
   - 29.2.0
   - 30.0.0
   - 30.0.0.0rc1
+aliases:
+- CVE-2012-2654
+details: The (1) EC2 and (2) OS APIs in OpenStack Compute (Nova) Folsom (2012.2),
+  Essex (2012.1), and Diablo (2011.3) do not properly check the protocol when security
+  groups are created and the network protocol is not specified entirely in lowercase,
+  which allows remote attackers to bypass intended access restrictions.
+id: PYSEC-2012-37
+modified: '2024-11-21T14:22:55.891133Z'
+published: '2012-06-21T15:55:00Z'
 references:
 - type: WEB
   url: https://review.openstack.org/#/c/8239/
@@ -164,3 +164,4 @@ references:
   url: http://secunia.com/advisories/46808
 - type: WEB
   url: https://exchange.xforce.ibmcloud.com/vulnerabilities/76110
+withdrawn: '2024-11-22T04:37:04Z'
