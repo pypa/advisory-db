@@ -1,21 +1,12 @@
-id: PYSEC-2015-38
-modified: 2024-11-21T14:22:51.342319Z
-published: 2015-02-24T15:59:00Z
-aliases:
-- CVE-2015-1881
-details: OpenStack Image Registry and Delivery Service (Glance) 2014.2 through 2014.2.2
-  does not properly remove images, which allows remote authenticated users to cause
-  a denial of service (disk consumption) by creating a large number of images using
-  the task v2 API and then deleting them, a different vulnerability than CVE-2014-9684.
 affected:
 - package:
     ecosystem: PyPI
     name: glance
     purl: pkg:pypi/glance
   ranges:
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
   versions:
   - 15.0.2
   - 17.0.1
@@ -88,6 +79,15 @@ affected:
   - 29.0.0.0b2
   - 29.0.0.0b3
   - 29.0.0.0rc1
+aliases:
+- CVE-2015-1881
+details: OpenStack Image Registry and Delivery Service (Glance) 2014.2 through 2014.2.2
+  does not properly remove images, which allows remote authenticated users to cause
+  a denial of service (disk consumption) by creating a large number of images using
+  the task v2 API and then deleting them, a different vulnerability than CVE-2014-9684.
+id: PYSEC-2015-38
+modified: '2024-11-21T14:22:51.342319Z'
+published: '2015-02-24T15:59:00Z'
 references:
 - type: EVIDENCE
   url: https://bugs.launchpad.net/glance/+bug/1420696
@@ -97,3 +97,4 @@ references:
   url: http://rhn.redhat.com/errata/RHSA-2015-0938.html
 - type: WEB
   url: http://www.securityfocus.com/bid/72694
+withdrawn: '2024-11-22T04:37:04Z'

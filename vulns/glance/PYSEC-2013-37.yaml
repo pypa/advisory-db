@@ -1,29 +1,19 @@
-id: PYSEC-2013-37
-modified: 2024-11-21T14:22:51.177765Z
-published: 2013-02-24T21:55:00Z
-aliases:
-- CVE-2013-0212
-details: store/swift.py in OpenStack Glance Essex (2012.1), Folsom (2012.2) before
-  2012.2.3, and Grizzly, when in Swift single tenant mode, logs the Swift endpoint's
-  user name and password in cleartext when the endpoint is misconfigured or unusable,
-  allows remote authenticated users to obtain sensitive information by reading the
-  error messages.
 affected:
 - package:
     ecosystem: PyPI
     name: glance
     purl: pkg:pypi/glance
   ranges:
-  - type: GIT
-    events:
-    - introduced: "0"
+  - events:
+    - introduced: '0'
     - fixed: e96273112b5b5da58d970796b7cfce04c5030a89
     - fixed: 37d4d96bf88c2bf3e7e9511b5e321cf4bed364b7
     - fixed: 96a470be64adcef97f235ca96ed3c59ed954a4c1
     repo: https://github.com/openstack/glance
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
+    type: GIT
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
   versions:
   - 15.0.2
   - 17.0.1
@@ -96,6 +86,16 @@ affected:
   - 29.0.0.0b2
   - 29.0.0.0b3
   - 29.0.0.0rc1
+aliases:
+- CVE-2013-0212
+details: store/swift.py in OpenStack Glance Essex (2012.1), Folsom (2012.2) before
+  2012.2.3, and Grizzly, when in Swift single tenant mode, logs the Swift endpoint's
+  user name and password in cleartext when the endpoint is misconfigured or unusable,
+  allows remote authenticated users to obtain sensitive information by reading the
+  error messages.
+id: PYSEC-2013-37
+modified: '2024-11-21T14:22:51.177765Z'
+published: '2013-02-24T21:55:00Z'
 references:
 - type: FIX
   url: https://bugzilla.redhat.com/show_bug.cgi?id=902964
@@ -121,3 +121,4 @@ references:
   url: http://secunia.com/advisories/51957
 - type: FIX
   url: https://github.com/openstack/glance/commit/96a470be64adcef97f235ca96ed3c59ed954a4c1
+withdrawn: '2024-11-22T04:37:04Z'

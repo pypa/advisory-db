@@ -1,21 +1,12 @@
-id: PYSEC-2013-42
-modified: 2024-11-21T14:22:52.629772Z
-published: 2013-09-23T20:55:00Z
-aliases:
-- CVE-2013-4294
-details: The (1) mamcache and (2) KVS token backends in OpenStack Identity (Keystone)
-  Folsom 2012.2.x and Grizzly before 2013.1.4 do not properly compare the PKI token
-  revocation list with PKI tokens, which allow remote attackers to bypass intended
-  access restrictions via a revoked PKI token.
 affected:
 - package:
     ecosystem: PyPI
     name: keystone
     purl: pkg:pypi/keystone
   ranges:
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
   versions:
   - 12.0.2
   - 12.0.3
@@ -66,6 +57,15 @@ affected:
   - 25.0.0.0rc1
   - 26.0.0
   - 26.0.0.0rc1
+aliases:
+- CVE-2013-4294
+details: The (1) mamcache and (2) KVS token backends in OpenStack Identity (Keystone)
+  Folsom 2012.2.x and Grizzly before 2013.1.4 do not properly compare the PKI token
+  revocation list with PKI tokens, which allow remote attackers to bypass intended
+  access restrictions via a revoked PKI token.
+id: PYSEC-2013-42
+modified: '2024-11-21T14:22:52.629772Z'
+published: '2013-09-23T20:55:00Z'
 references:
 - type: ADVISORY
   url: https://bugs.launchpad.net/keystone/+bug/1202952
@@ -79,3 +79,4 @@ references:
   url: http://secunia.com/advisories/54706
 - type: ADVISORY
   url: http://www.ubuntu.com/usn/USN-2002-1
+withdrawn: '2024-11-22T04:37:04Z'

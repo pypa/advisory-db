@@ -1,21 +1,14 @@
-id: PYSEC-2021-886
-modified: 2024-11-21T14:22:50.153222Z
-published: 2021-07-13T22:15:00Z
-aliases:
-- CVE-2020-19716
-details: A buffer overflow vulnerability in the Databuf function in types.cpp of Exiv2
-  v0.27.1 leads to a denial of service (DOS).
 affected:
 - package:
     ecosystem: PyPI
     name: exiv2
     purl: pkg:pypi/exiv2
   ranges:
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
   versions:
-  - "0.1"
+  - '0.1'
   - 0.11.0
   - 0.11.1
   - 0.11.2
@@ -36,12 +29,16 @@ affected:
   - 0.16.3.post1
   - 0.17.0
   - 0.17.1
-  - "0.2"
-  - "0.3"
+  - '0.2'
+  - '0.3'
   - 0.3.1
-severity:
-- type: CVSS_V3
-  score: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H
+aliases:
+- CVE-2020-19716
+details: A buffer overflow vulnerability in the Databuf function in types.cpp of Exiv2
+  v0.27.1 leads to a denial of service (DOS).
+id: PYSEC-2021-886
+modified: '2024-11-21T14:22:50.153222Z'
+published: '2021-07-13T22:15:00Z'
 references:
 - type: REPORT
   url: https://github.com/Exiv2/exiv2/issues/980
@@ -49,3 +46,7 @@ references:
   url: https://lists.debian.org/debian-lts-announce/2022/11/msg00013.html
 - type: WEB
   url: https://lists.debian.org/debian-lts-announce/2022/11/msg00013.html
+severity:
+- score: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H
+  type: CVSS_V3
+withdrawn: '2024-11-22T04:37:04Z'

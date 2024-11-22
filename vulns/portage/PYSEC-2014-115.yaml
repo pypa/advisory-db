@@ -1,21 +1,12 @@
-id: PYSEC-2014-115
-modified: 2024-11-21T14:22:59.10272Z
-published: 2014-09-29T22:55:00Z
-aliases:
-- CVE-2013-2100
-details: The urlopen function in pym/portage/util/_urlopen.py in Gentoo Portage 2.1.12,
-  when using HTTPS, does not verify X.509 certificates from SSL servers, which allows
-  man-in-the-middle attackers to spoof servers and modify binary package lists via
-  a crafted certificate.
 affected:
 - package:
     ecosystem: PyPI
     name: portage
     purl: pkg:pypi/portage
   ranges:
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
   versions:
   - 3.0.18
   - 3.0.19
@@ -71,6 +62,15 @@ affected:
   - 3.0.65
   - 3.0.66
   - 3.0.66.1
+aliases:
+- CVE-2013-2100
+details: The urlopen function in pym/portage/util/_urlopen.py in Gentoo Portage 2.1.12,
+  when using HTTPS, does not verify X.509 certificates from SSL servers, which allows
+  man-in-the-middle attackers to spoof servers and modify binary package lists via
+  a crafted certificate.
+id: PYSEC-2014-115
+modified: '2024-11-21T14:22:59.10272Z'
+published: '2014-09-29T22:55:00Z'
 references:
 - type: EVIDENCE
   url: http://openwall.com/lists/oss-security/2013/05/15/5
@@ -84,3 +84,4 @@ references:
   url: https://security.gentoo.org/glsa/201507-16
 - type: WEB
   url: https://exchange.xforce.ibmcloud.com/vulnerabilities/84315
+withdrawn: '2024-11-22T04:37:05Z'

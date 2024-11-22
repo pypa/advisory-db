@@ -1,6 +1,14 @@
-id: PYSEC-2012-28
-modified: 2024-11-21T14:22:41.328571Z
-published: 2012-03-21T10:11:00Z
+affected:
+- package:
+    ecosystem: PyPI
+    name: bitdefender
+    purl: pkg:pypi/bitdefender
+  ranges:
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
+  versions:
+  - 0.0.1
 aliases:
 - CVE-2012-1463
 details: 'The ELF file parser in AhnLab V3 Internet Security 2011.01.18.00, Bitdefender
@@ -11,17 +19,9 @@ details: 'The ELF file parser in AhnLab V3 Internet Security 2011.01.18.00, Bitd
   bypass malware detection via an ELF file with a modified endianness field.  NOTE:
   this may later be SPLIT into multiple CVEs if additional information is published
   showing that the error occurred independently in different ELF parser implementations.'
-affected:
-- package:
-    ecosystem: PyPI
-    name: bitdefender
-    purl: pkg:pypi/bitdefender
-  ranges:
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
-  versions:
-  - 0.0.1
+id: PYSEC-2012-28
+modified: '2024-11-21T14:22:41.328571Z'
+published: '2012-03-21T10:11:00Z'
 references:
 - type: WEB
   url: http://www.ieee-security.org/TC/SP2012/program.html
@@ -35,3 +35,4 @@ references:
   url: http://osvdb.org/80433
 - type: WEB
   url: https://exchange.xforce.ibmcloud.com/vulnerabilities/74311
+withdrawn: '2024-11-22T04:37:03Z'

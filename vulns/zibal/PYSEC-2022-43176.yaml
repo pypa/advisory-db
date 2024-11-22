@@ -1,28 +1,29 @@
-id: PYSEC-2022-43176
-modified: 2024-11-21T14:23:03.404044Z
-published: 2022-06-24T21:15:00Z
-aliases:
-- CVE-2022-34064
-details: The Zibal package in PyPI v1.0.0 was discovered to contain a code execution
-  backdoor. This vulnerability allows attackers to access sensitive user information
-  and digital currency keys, as well as escalate privileges.
 affected:
 - package:
     ecosystem: PyPI
     name: zibal
     purl: pkg:pypi/zibal
   ranges:
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
   versions:
   - 1.0.0
   - 1.1.0
-severity:
-- type: CVSS_V3
-  score: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
+aliases:
+- CVE-2022-34064
+details: The Zibal package in PyPI v1.0.0 was discovered to contain a code execution
+  backdoor. This vulnerability allows attackers to access sensitive user information
+  and digital currency keys, as well as escalate privileges.
+id: PYSEC-2022-43176
+modified: '2024-11-21T14:23:03.404044Z'
+published: '2022-06-24T21:15:00Z'
 references:
 - type: PACKAGE
   url: https://pypi.org/project/zibal/
 - type: WEB
   url: http://pypi.doubanio.com/simple/request
+severity:
+- score: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
+  type: CVSS_V3
+withdrawn: '2024-11-22T04:37:05Z'

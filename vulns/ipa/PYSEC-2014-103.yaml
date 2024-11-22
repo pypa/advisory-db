@@ -1,21 +1,12 @@
-id: PYSEC-2014-103
-modified: 2024-11-21T14:22:51.957056Z
-published: 2014-05-29T14:19:00Z
-aliases:
-- CVE-2013-0199
-details: The default LDAP ACIs in FreeIPA 3.0 before 3.1.2 do not restrict access
-  to the (1) ipaNTTrustAuthIncoming and (2) ipaNTTrustAuthOutgoing attributes, which
-  allow remote attackers to obtain the Cross-Realm Kerberos Trust key via unspecified
-  vectors.
 affected:
 - package:
     ecosystem: PyPI
     name: ipa
     purl: pkg:pypi/ipa
   ranges:
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
   versions:
   - 4.10.2
   - 4.12.2
@@ -43,6 +34,15 @@ affected:
   - 4.8.7
   - 4.8.9
   - 4.9.12
+aliases:
+- CVE-2013-0199
+details: The default LDAP ACIs in FreeIPA 3.0 before 3.1.2 do not restrict access
+  to the (1) ipaNTTrustAuthIncoming and (2) ipaNTTrustAuthOutgoing attributes, which
+  allow remote attackers to obtain the Cross-Realm Kerberos Trust key via unspecified
+  vectors.
+id: PYSEC-2014-103
+modified: '2024-11-21T14:22:51.957056Z'
+published: '2014-05-29T14:19:00Z'
 references:
 - type: WEB
   url: http://www.securityfocus.com/bid/57542
@@ -56,3 +56,4 @@ references:
   url: http://www.freeipa.org/page/CVE-2013-0199
 - type: WEB
   url: https://exchange.xforce.ibmcloud.com/vulnerabilities/81486
+withdrawn: '2024-11-22T04:37:04Z'

@@ -1,21 +1,14 @@
-id: PYSEC-2018-136
-modified: 2024-11-21T14:22:48.67141Z
-published: 2018-09-19T22:29:00Z
-aliases:
-- CVE-2018-17229
-details: Exiv2::d2Data in types.cpp in Exiv2 v0.26 allows remote attackers to cause
-  a denial of service (heap-based buffer overflow) via a crafted image file.
 affected:
 - package:
     ecosystem: PyPI
     name: exiv2
     purl: pkg:pypi/exiv2
   ranges:
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
   versions:
-  - "0.1"
+  - '0.1'
   - 0.11.0
   - 0.11.1
   - 0.11.2
@@ -36,12 +29,16 @@ affected:
   - 0.16.3.post1
   - 0.17.0
   - 0.17.1
-  - "0.2"
-  - "0.3"
+  - '0.2'
+  - '0.3'
   - 0.3.1
-severity:
-- type: CVSS_V3
-  score: CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H
+aliases:
+- CVE-2018-17229
+details: Exiv2::d2Data in types.cpp in Exiv2 v0.26 allows remote attackers to cause
+  a denial of service (heap-based buffer overflow) via a crafted image file.
+id: PYSEC-2018-136
+modified: '2024-11-21T14:22:48.67141Z'
+published: '2018-09-19T22:29:00Z'
 references:
 - type: EVIDENCE
   url: https://github.com/Exiv2/exiv2/issues/453
@@ -49,3 +46,7 @@ references:
   url: https://github.com/Exiv2/exiv2/issues/453
 - type: WEB
   url: http://lists.opensuse.org/opensuse-security-announce/2020-04/msg00009.html
+severity:
+- score: CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H
+  type: CVSS_V3
+withdrawn: '2024-11-22T04:37:04Z'

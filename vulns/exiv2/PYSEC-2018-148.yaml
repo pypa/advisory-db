@@ -1,23 +1,14 @@
-id: PYSEC-2018-148
-modified: 2024-11-21T14:22:49.400819Z
-published: 2018-03-30T08:29:00Z
-aliases:
-- CVE-2018-9145
-details: 'In the DataBuf class in include/exiv2/types.hpp in Exiv2 0.26, an issue
-  exists in the constructor with an initial buffer size. A large size value may lead
-  to a SIGABRT during an attempt at memory allocation. NOTE: some third parties have
-  been unable to reproduce the SIGABRT when using the 4-DataBuf-abort-1 PoC file.'
 affected:
 - package:
     ecosystem: PyPI
     name: exiv2
     purl: pkg:pypi/exiv2
   ranges:
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
   versions:
-  - "0.1"
+  - '0.1'
   - 0.11.0
   - 0.11.1
   - 0.11.2
@@ -38,12 +29,18 @@ affected:
   - 0.16.3.post1
   - 0.17.0
   - 0.17.1
-  - "0.2"
-  - "0.3"
+  - '0.2'
+  - '0.3'
   - 0.3.1
-severity:
-- type: CVSS_V3
-  score: CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H
+aliases:
+- CVE-2018-9145
+details: 'In the DataBuf class in include/exiv2/types.hpp in Exiv2 0.26, an issue
+  exists in the constructor with an initial buffer size. A large size value may lead
+  to a SIGABRT during an attempt at memory allocation. NOTE: some third parties have
+  been unable to reproduce the SIGABRT when using the 4-DataBuf-abort-1 PoC file.'
+id: PYSEC-2018-148
+modified: '2024-11-21T14:22:49.400819Z'
+published: '2018-03-30T08:29:00Z'
 references:
 - type: EVIDENCE
   url: https://github.com/xiaoqx/pocs/tree/master/exiv2
@@ -55,3 +52,7 @@ references:
   url: https://bugzilla.novell.com/show_bug.cgi?id=1087879
 - type: ADVISORY
   url: https://security.gentoo.org/glsa/201811-14
+severity:
+- score: CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H
+  type: CVSS_V3
+withdrawn: '2024-11-22T04:37:04Z'

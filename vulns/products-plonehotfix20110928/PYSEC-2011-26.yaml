@@ -1,24 +1,24 @@
-id: PYSEC-2011-26
-modified: 2024-11-21T14:22:59.154748Z
-published: 2011-10-10T10:55:00Z
-aliases:
-- CVE-2011-3587
-details: Unspecified vulnerability in Zope 2.12.x and 2.13.x, as used in Plone 4.0.x
-  through 4.0.9, 4.1, and 4.2 through 4.2a2, allows remote attackers to execute arbitrary
-  commands via vectors related to the p_ class in OFS/misc_.py and the use of Python
-  modules.
 affected:
 - package:
     ecosystem: PyPI
     name: products-plonehotfix20110928
     purl: pkg:pypi/products-plonehotfix20110928
   ranges:
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
   versions:
-  - "1.0"
-  - "1.1"
+  - '1.0'
+  - '1.1'
+aliases:
+- CVE-2011-3587
+details: Unspecified vulnerability in Zope 2.12.x and 2.13.x, as used in Plone 4.0.x
+  through 4.0.9, 4.1, and 4.2 through 4.2a2, allows remote attackers to execute arbitrary
+  commands via vectors related to the p_ class in OFS/misc_.py and the use of Python
+  modules.
+id: PYSEC-2011-26
+modified: '2024-11-21T14:22:59.154748Z'
+published: '2011-10-10T10:55:00Z'
 references:
 - type: FIX
   url: https://bugzilla.redhat.com/show_bug.cgi?id=742297
@@ -38,3 +38,4 @@ references:
   url: http://plone.org/products/plone-hotfix/releases/20110928
 - type: ADVISORY
   url: http://secunia.com/advisories/46323
+withdrawn: '2024-11-22T04:37:05Z'

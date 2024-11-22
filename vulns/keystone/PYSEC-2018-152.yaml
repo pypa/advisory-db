@@ -1,21 +1,12 @@
-id: PYSEC-2018-152
-modified: 2024-11-21T14:22:53.005774Z
-published: 2018-07-19T13:29:00Z
-aliases:
-- CVE-2017-2673
-details: An authorization-check flaw was discovered in federation configurations of
-  the OpenStack Identity service (keystone). An authenticated federated user could
-  request permissions to a project and unintentionally be granted all related roles
-  including administrative roles.
 affected:
 - package:
     ecosystem: PyPI
     name: keystone
     purl: pkg:pypi/keystone
   ranges:
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
   versions:
   - 12.0.2
   - 12.0.3
@@ -66,9 +57,15 @@ affected:
   - 25.0.0.0rc1
   - 26.0.0
   - 26.0.0.0rc1
-severity:
-- type: CVSS_V3
-  score: CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H
+aliases:
+- CVE-2017-2673
+details: An authorization-check flaw was discovered in federation configurations of
+  the OpenStack Identity service (keystone). An authenticated federated user could
+  request permissions to a project and unintentionally be granted all related roles
+  including administrative roles.
+id: PYSEC-2018-152
+modified: '2024-11-21T14:22:53.005774Z'
+published: '2018-07-19T13:29:00Z'
 references:
 - type: REPORT
   url: https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2017-2673
@@ -96,3 +93,7 @@ references:
   url: http://www.securityfocus.com/bid/98032
 - type: ADVISORY
   url: http://www.securityfocus.com/bid/98032
+severity:
+- score: CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H
+  type: CVSS_V3
+withdrawn: '2024-11-22T04:37:04Z'

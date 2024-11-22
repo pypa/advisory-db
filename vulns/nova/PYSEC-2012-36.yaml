@@ -1,28 +1,19 @@
-id: PYSEC-2012-36
-modified: 2024-11-21T14:22:55.825436Z
-published: 2012-06-07T19:55:00Z
-aliases:
-- CVE-2012-2101
-details: Openstack Compute (Nova) Folsom, 2012.1, and 2011.3 does not limit the number
-  of security group rules, which allows remote authenticated users with certain permissions
-  to cause a denial of service (CPU and hard drive consumption) via a network request
-  that triggers a large number of iptables rules.
 affected:
 - package:
     ecosystem: PyPI
     name: nova
     purl: pkg:pypi/nova
   ranges:
-  - type: GIT
-    events:
-    - introduced: "0"
+  - events:
+    - introduced: '0'
     - fixed: 8c8735a73afb16d5856f0aa6088e9ae406c52beb
     - fixed: a67db4586f70ed881d65e80035b2a25be195ce64
     - fixed: 1f644d210557b1254f7c7b39424b09a45329ade7
     repo: https://github.com/openstack/nova
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
+    type: GIT
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
   versions:
   - 15.1.5
   - 16.1.6
@@ -142,6 +133,15 @@ affected:
   - 29.2.0
   - 30.0.0
   - 30.0.0.0rc1
+aliases:
+- CVE-2012-2101
+details: Openstack Compute (Nova) Folsom, 2012.1, and 2011.3 does not limit the number
+  of security group rules, which allows remote authenticated users with certain permissions
+  to cause a denial of service (CPU and hard drive consumption) via a network request
+  that triggers a large number of iptables rules.
+id: PYSEC-2012-36
+modified: '2024-11-21T14:22:55.825436Z'
+published: '2012-06-07T19:55:00Z'
 references:
 - type: WEB
   url: https://lists.launchpad.net/openstack/msg10268.html
@@ -167,3 +167,4 @@ references:
   url: http://lists.fedoraproject.org/pipermail/package-announce/2012-May/079434.html
 - type: WEB
   url: https://exchange.xforce.ibmcloud.com/vulnerabilities/75243
+withdrawn: '2024-11-22T04:37:04Z'

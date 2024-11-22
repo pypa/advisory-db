@@ -1,19 +1,12 @@
-id: PYSEC-2019-255
-modified: 2024-11-21T14:23:01.636914Z
-published: 2019-02-19T16:29:00Z
-aliases:
-- CVE-2019-8939
-details: data/interfaces/default/history.html in Tautulli 2.1.26 has XSS via a crafted
-  Plex username that is mishandled when constructing the History page.
 affected:
 - package:
     ecosystem: PyPI
     name: tautulli
     purl: pkg:pypi/tautulli
   ranges:
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
   versions:
   - 1.0.0
   - 1.1.0
@@ -57,9 +50,13 @@ affected:
   - 4.3.2.2140
   - 4.3.3.2140
   - 4.3.4.2140
-severity:
-- type: CVSS_V3
-  score: CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+aliases:
+- CVE-2019-8939
+details: data/interfaces/default/history.html in Tautulli 2.1.26 has XSS via a crafted
+  Plex username that is mishandled when constructing the History page.
+id: PYSEC-2019-255
+modified: '2024-11-21T14:23:01.636914Z'
+published: '2019-02-19T16:29:00Z'
 references:
 - type: EVIDENCE
   url: https://github.com/Tautulli/Tautulli-Issues/issues/161
@@ -71,3 +68,7 @@ references:
   url: http://www.securityfocus.com/bid/107171
 - type: ADVISORY
   url: http://www.securityfocus.com/bid/107171
+severity:
+- score: CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+  type: CVSS_V3
+withdrawn: '2024-11-22T04:37:05Z'

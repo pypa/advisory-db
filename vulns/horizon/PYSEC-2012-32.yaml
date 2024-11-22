@@ -1,26 +1,17 @@
-id: PYSEC-2012-32
-modified: 2024-11-21T14:22:51.729618Z
-published: 2012-06-05T22:55:00Z
-aliases:
-- CVE-2012-2094
-details: Cross-site scripting (XSS) vulnerability in the refresh mechanism in the
-  log viewer in horizon/static/horizon/js/horizon.js in OpenStack Dashboard (Horizon)
-  folsom-1 and 2012.1 and earlier allows remote attackers to inject arbitrary web
-  script or HTML via the guest console.
 affected:
 - package:
     ecosystem: PyPI
     name: horizon
     purl: pkg:pypi/horizon
   ranges:
-  - type: GIT
-    events:
-    - introduced: "0"
+  - events:
+    - introduced: '0'
     - fixed: 7f8c788aa70db98ac904f37fa4197fcabb802942
     repo: https://github.com/openstack/horizon
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
+    type: GIT
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
   versions:
   - 12.0.2
   - 12.0.3
@@ -110,6 +101,15 @@ affected:
   - 24.0.0
   - 25.0.0
   - 25.1.0
+aliases:
+- CVE-2012-2094
+details: Cross-site scripting (XSS) vulnerability in the refresh mechanism in the
+  log viewer in horizon/static/horizon/js/horizon.js in OpenStack Dashboard (Horizon)
+  folsom-1 and 2012.1 and earlier allows remote attackers to inject arbitrary web
+  script or HTML via the guest console.
+id: PYSEC-2012-32
+modified: '2024-11-21T14:22:51.729618Z'
+published: '2012-06-05T22:55:00Z'
 references:
 - type: ADVISORY
   url: http://secunia.com/advisories/49024
@@ -129,3 +129,4 @@ references:
   url: http://lists.fedoraproject.org/pipermail/package-announce/2012-April/079160.html
 - type: WEB
   url: https://exchange.xforce.ibmcloud.com/vulnerabilities/76136
+withdrawn: '2024-11-22T04:37:04Z'

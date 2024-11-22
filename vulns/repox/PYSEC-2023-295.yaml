@@ -1,28 +1,29 @@
-id: PYSEC-2023-295
-modified: 2024-11-21T14:23:00.792103Z
-published: 2023-12-13T10:15:00Z
-aliases:
-- CVE-2023-6720
-details: An XSS vulnerability stored in Repox has been identified, which allows a
-  local attacker to store a specially crafted JavaScript payload on the server, due
-  to the lack of proper sanitisation of field elements, allowing the attacker to trigger
-  the malicious payload when the application loads.
 affected:
 - package:
     ecosystem: PyPI
     name: repox
     purl: pkg:pypi/repox
   ranges:
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
   versions:
   - 0.0.1
   - 0.0.2
   - 0.0.3
-severity:
-- type: CVSS_V3
-  score: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N
+aliases:
+- CVE-2023-6720
+details: An XSS vulnerability stored in Repox has been identified, which allows a
+  local attacker to store a specially crafted JavaScript payload on the server, due
+  to the lack of proper sanitisation of field elements, allowing the attacker to trigger
+  the malicious payload when the application loads.
+id: PYSEC-2023-295
+modified: '2024-11-21T14:23:00.792103Z'
+published: '2023-12-13T10:15:00Z'
 references:
 - type: WEB
   url: https://www.incibe.es/en/incibe-cert/notices/aviso/multiple-vulnerabilities-repox
+severity:
+- score: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N
+  type: CVSS_V3
+withdrawn: '2024-11-22T04:37:05Z'

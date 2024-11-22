@@ -1,6 +1,14 @@
-id: PYSEC-2012-24
-modified: 2024-11-21T14:22:41.111226Z
-published: 2012-03-21T10:11:00Z
+affected:
+- package:
+    ecosystem: PyPI
+    name: bitdefender
+    purl: pkg:pypi/bitdefender
+  ranges:
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
+  versions:
+  - 0.0.1
 aliases:
 - CVE-2012-1443
 details: 'The RAR file parser in ClamAV 0.96.4, Rising Antivirus 22.83.00.03, Quick
@@ -20,17 +28,9 @@ details: 'The RAR file parser in ClamAV 0.96.4, Rising Antivirus 22.83.00.03, Qu
   to bypass malware detection via a RAR file with an initial MZ character sequence.  NOTE:
   this may later be SPLIT into multiple CVEs if additional information is published
   showing that the error occurred independently in different RAR parser implementations.'
-affected:
-- package:
-    ecosystem: PyPI
-    name: bitdefender
-    purl: pkg:pypi/bitdefender
-  ranges:
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
-  versions:
-  - 0.0.1
+id: PYSEC-2012-24
+modified: '2024-11-21T14:22:41.111226Z'
+published: '2012-03-21T10:11:00Z'
 references:
 - type: WEB
   url: http://www.ieee-security.org/TC/SP2012/program.html
@@ -66,3 +66,4 @@ references:
   url: http://osvdb.org/80460
 - type: WEB
   url: http://osvdb.org/80472
+withdrawn: '2024-11-22T04:37:03Z'

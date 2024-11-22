@@ -1,20 +1,12 @@
-id: PYSEC-2023-270
-modified: 2024-11-21T14:22:51.507003Z
-published: 2023-03-06T23:15:00Z
-aliases:
-- CVE-2022-4134
-details: A flaw was found in openstack-glance. This issue could allow a remote, authenticated
-  attacker to tamper with images, compromising the integrity of virtual machines created
-  using these modified images.
 affected:
 - package:
     ecosystem: PyPI
     name: glance
     purl: pkg:pypi/glance
   ranges:
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
   versions:
   - 15.0.2
   - 17.0.1
@@ -87,9 +79,14 @@ affected:
   - 29.0.0.0b2
   - 29.0.0.0b3
   - 29.0.0.0rc1
-severity:
-- type: CVSS_V3
-  score: CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:N/I:L/A:N
+aliases:
+- CVE-2022-4134
+details: A flaw was found in openstack-glance. This issue could allow a remote, authenticated
+  attacker to tamper with images, compromising the integrity of virtual machines created
+  using these modified images.
+id: PYSEC-2023-270
+modified: '2024-11-21T14:22:51.507003Z'
+published: '2023-03-06T23:15:00Z'
 references:
 - type: ADVISORY
   url: https://wiki.openstack.org/wiki/OSSN/OSSN-0090
@@ -97,3 +94,7 @@ references:
   url: https://bugzilla.redhat.com/show_bug.cgi?id=2147462
 - type: REPORT
   url: https://bugs.launchpad.net/glance/+bug/1990157
+severity:
+- score: CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:N/I:L/A:N
+  type: CVSS_V3
+withdrawn: '2024-11-22T04:37:04Z'

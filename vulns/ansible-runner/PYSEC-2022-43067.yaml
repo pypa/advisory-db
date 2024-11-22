@@ -1,22 +1,12 @@
-id: PYSEC-2022-43067
-modified: 2024-11-21T14:22:40.36338Z
-published: 2022-08-23T16:15:00Z
-aliases:
-- CVE-2021-3701
-details: A flaw was found in ansible-runner where the default temporary files configuration
-  in ansible-2.0.0 are written to world R/W locations. This flaw allows an attacker
-  to pre-create the directory, resulting in reading private information or forcing
-  ansible-runner to write files as the legitimate user in a place they did not expect.
-  The highest threat from this vulnerability is to confidentiality and integrity.
 affected:
 - package:
     ecosystem: PyPI
     name: ansible-runner
     purl: pkg:pypi/ansible-runner
   ranges:
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
   versions:
   - 1.0.1
   - 1.0.2
@@ -74,9 +64,16 @@ affected:
   - 2.3.5
   - 2.3.6
   - 2.4.0
-severity:
-- type: CVSS_V3
-  score: CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:N
+aliases:
+- CVE-2021-3701
+details: A flaw was found in ansible-runner where the default temporary files configuration
+  in ansible-2.0.0 are written to world R/W locations. This flaw allows an attacker
+  to pre-create the directory, resulting in reading private information or forcing
+  ansible-runner to write files as the legitimate user in a place they did not expect.
+  The highest threat from this vulnerability is to confidentiality and integrity.
+id: PYSEC-2022-43067
+modified: '2024-11-21T14:22:40.36338Z'
+published: '2022-08-23T16:15:00Z'
 references:
 - type: ADVISORY
   url: https://access.redhat.com/security/cve/CVE-2021-3701
@@ -92,3 +89,7 @@ references:
   url: https://github.com/ansible/ansible-runner/pull/742/commits
 - type: REPORT
   url: https://github.com/ansible/ansible-runner/issues/738
+severity:
+- score: CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:N
+  type: CVSS_V3
+withdrawn: '2024-11-22T04:37:03Z'

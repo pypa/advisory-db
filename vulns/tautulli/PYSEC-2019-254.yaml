@@ -1,20 +1,12 @@
-id: PYSEC-2019-254
-modified: 2024-11-21T14:23:01.583905Z
-published: 2019-12-18T18:15:00Z
-aliases:
-- CVE-2019-19833
-details: In Tautulli 2.1.9, CSRF in the /shutdown URI allows an attacker to shut down
-  the remote media server. (Also, anonymous access can be achieved in applications
-  that do not have a user login area).
 affected:
 - package:
     ecosystem: PyPI
     name: tautulli
     purl: pkg:pypi/tautulli
   ranges:
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
   versions:
   - 1.0.0
   - 1.1.0
@@ -58,9 +50,14 @@ affected:
   - 4.3.2.2140
   - 4.3.3.2140
   - 4.3.4.2140
-severity:
-- type: CVSS_V3
-  score: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H
+aliases:
+- CVE-2019-19833
+details: In Tautulli 2.1.9, CSRF in the /shutdown URI allows an attacker to shut down
+  the remote media server. (Also, anonymous access can be achieved in applications
+  that do not have a user login area).
+id: PYSEC-2019-254
+modified: '2024-11-21T14:23:01.583905Z'
+published: '2019-12-18T18:15:00Z'
 references:
 - type: WEB
   url: https://github.com/Tautulli/Tautulli/compare/v2.1.9...v2.1.10-beta
@@ -76,3 +73,7 @@ references:
   url: http://packetstormsecurity.com/files/155974/Tautulli-2.1.9-Denial-Of-Service.html
 - type: ADVISORY
   url: http://packetstormsecurity.com/files/155974/Tautulli-2.1.9-Denial-Of-Service.html
+severity:
+- score: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H
+  type: CVSS_V3
+withdrawn: '2024-11-22T04:37:05Z'

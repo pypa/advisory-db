@@ -1,21 +1,14 @@
-id: PYSEC-2018-131
-modified: 2024-11-21T14:22:48.369854Z
-published: 2018-06-13T11:29:00Z
-aliases:
-- CVE-2018-12264
-details: Exiv2 0.26 has integer overflows in LoaderTiff::getData() in preview.cpp,
-  leading to an out-of-bounds read in Exiv2::ValueType::setDataArea in value.hpp.
 affected:
 - package:
     ecosystem: PyPI
     name: exiv2
     purl: pkg:pypi/exiv2
   ranges:
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
   versions:
-  - "0.1"
+  - '0.1'
   - 0.11.0
   - 0.11.1
   - 0.11.2
@@ -36,12 +29,16 @@ affected:
   - 0.16.3.post1
   - 0.17.0
   - 0.17.1
-  - "0.2"
-  - "0.3"
+  - '0.2'
+  - '0.3'
   - 0.3.1
-severity:
-- type: CVSS_V3
-  score: CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
+aliases:
+- CVE-2018-12264
+details: Exiv2 0.26 has integer overflows in LoaderTiff::getData() in preview.cpp,
+  leading to an out-of-bounds read in Exiv2::ValueType::setDataArea in value.hpp.
+id: PYSEC-2018-131
+modified: '2024-11-21T14:22:48.369854Z'
+published: '2018-06-13T11:29:00Z'
 references:
 - type: EVIDENCE
   url: https://github.com/TeamSeri0us/pocs/blob/master/exiv2/2-out-of-read-Poc
@@ -63,3 +60,7 @@ references:
   url: https://access.redhat.com/errata/RHSA-2019:2101
 - type: WEB
   url: http://lists.opensuse.org/opensuse-security-announce/2020-04/msg00009.html
+severity:
+- score: CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
+  type: CVSS_V3
+withdrawn: '2024-11-22T04:37:04Z'

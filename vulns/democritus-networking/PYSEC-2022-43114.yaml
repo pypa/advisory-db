@@ -1,27 +1,24 @@
-id: PYSEC-2022-43114
-modified: 2024-11-21T14:22:44.376649Z
-published: 2022-09-19T16:15:00Z
-aliases:
-- CVE-2022-40428
-details: The d8s-mpeg for python, as distributed on PyPI, included a potential code-execution
-  backdoor inserted by a third party. The backdoor is the democritus-networking package.
-  The affected version is 0.1.0.
 affected:
 - package:
     ecosystem: PyPI
     name: democritus-networking
     purl: pkg:pypi/democritus-networking
   ranges:
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
   versions:
   - 2021.1.21
   - 2023.1.21
   - 2023.1.22
-severity:
-- type: CVSS_V3
-  score: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
+aliases:
+- CVE-2022-40428
+details: The d8s-mpeg for python, as distributed on PyPI, included a potential code-execution
+  backdoor inserted by a third party. The backdoor is the democritus-networking package.
+  The affected version is 0.1.0.
+id: PYSEC-2022-43114
+modified: '2024-11-21T14:22:44.376649Z'
+published: '2022-09-19T16:15:00Z'
 references:
 - type: PACKAGE
   url: https://pypi.org/project/democritus-networking/
@@ -29,3 +26,7 @@ references:
   url: https://github.com/democritus-project/d8s-mpeg/issues/5
 - type: REPORT
   url: https://github.com/democritus-project/d8s-mpeg/issues/5
+severity:
+- score: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
+  type: CVSS_V3
+withdrawn: '2024-11-22T04:37:03Z'

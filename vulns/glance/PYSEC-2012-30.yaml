@@ -1,27 +1,18 @@
-id: PYSEC-2012-30
-modified: 2024-11-21T14:22:51.113933Z
-published: 2012-11-11T13:00:00Z
-aliases:
-- CVE-2012-5482
-details: 'The v2 API in OpenStack Glance Grizzly, Folsom (2012.2), and Essex (2012.1)
-  allows remote authenticated users to delete arbitrary non-protected images via an
-  image deletion request.  NOTE: this vulnerability exists because of an incomplete
-  fix for CVE-2012-4573.'
 affected:
 - package:
     ecosystem: PyPI
     name: glance
     purl: pkg:pypi/glance
   ranges:
-  - type: GIT
-    events:
-    - introduced: "0"
+  - events:
+    - introduced: '0'
     - fixed: fc0ee7623ec59c87ac6fc671e95a9798d6f2e2c3
     - fixed: b591304b8980d8aca8fa6cda9ea1621aca000c88
     repo: https://github.com/openstack/glance
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
+    type: GIT
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
   versions:
   - 15.0.2
   - 17.0.1
@@ -94,6 +85,15 @@ affected:
   - 29.0.0.0b2
   - 29.0.0.0b3
   - 29.0.0.0rc1
+aliases:
+- CVE-2012-5482
+details: 'The v2 API in OpenStack Glance Grizzly, Folsom (2012.2), and Essex (2012.1)
+  allows remote authenticated users to delete arbitrary non-protected images via an
+  image deletion request.  NOTE: this vulnerability exists because of an incomplete
+  fix for CVE-2012-4573.'
+id: PYSEC-2012-30
+modified: '2024-11-21T14:22:51.113933Z'
+published: '2012-11-11T13:00:00Z'
 references:
 - type: WEB
   url: https://bugs.launchpad.net/glance/+bug/1076506
@@ -121,3 +121,4 @@ references:
   url: http://osvdb.org/87248
 - type: WEB
   url: https://exchange.xforce.ibmcloud.com/vulnerabilities/80019
+withdrawn: '2024-11-22T04:37:04Z'
