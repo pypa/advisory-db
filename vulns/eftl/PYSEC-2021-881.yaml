@@ -1,6 +1,18 @@
-id: PYSEC-2021-881
-modified: 2024-11-21T14:22:45.803448Z
-published: 2021-10-05T18:15:00Z
+affected:
+- package:
+    ecosystem: PyPI
+    name: eftl
+    purl: pkg:pypi/eftl
+  ranges:
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
+  versions:
+  - 1.0.0
+  - 1.1.0
+  - 1.2.0
+  - 1.3.0
+  - 1.3.1
 aliases:
 - CVE-2021-35497
 details: 'The FTL Server (tibftlserver) and Docker images containing tibftlserver
@@ -24,26 +36,15 @@ details: 'The FTL Server (tibftlserver) and Docker images containing tibftlserve
   eFTL - Developer Edition: versions 6.2.0, 6.3.0, 6.3.1, 6.4.0, 6.5.0, 6.6.0, 6.6.1,
   and 6.7.0, and TIBCO eFTL - Enterprise Edition: versions 6.2.0, 6.3.0, 6.3.1, 6.4.0,
   6.5.0, 6.6.0, 6.6.1, and 6.7.0.'
-affected:
-- package:
-    ecosystem: PyPI
-    name: eftl
-    purl: pkg:pypi/eftl
-  ranges:
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
-  versions:
-  - 1.0.0
-  - 1.1.0
-  - 1.2.0
-  - 1.3.0
-  - 1.3.1
-severity:
-- type: CVSS_V3
-  score: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H
+id: PYSEC-2021-881
+modified: '2024-11-21T14:22:45.803448Z'
+published: '2021-10-05T18:15:00Z'
 references:
 - type: ADVISORY
   url: https://www.tibco.com/services/support/advisories
 - type: ADVISORY
   url: https://www.tibco.com/support/advisories/2021/10/tibco-security-advisory-october-5-2021-tibco-ftl-2021-35497
+severity:
+- score: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H
+  type: CVSS_V3
+withdrawn: '2024-11-22T04:37:03Z'

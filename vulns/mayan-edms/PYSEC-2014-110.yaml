@@ -1,26 +1,17 @@
-id: PYSEC-2014-110
-modified: 2024-11-21T14:22:54.240407Z
-published: 2014-05-27T13:55:00Z
-aliases:
-- CVE-2014-3840
-details: Multiple cross-site scripting (XSS) vulnerabilities in apps/common/templates/calculate_form_title.html
-  in Mayan EDMS 0.13 allow remote authenticated users to inject arbitrary web script
-  or HTML via a (1) tag or the (2) title of a source in a Staging folder, (3) Name
-  field in a bootstrap setup, or Title field in a (4) smart link or (5) web form.
 affected:
 - package:
     ecosystem: PyPI
     name: mayan-edms
     purl: pkg:pypi/mayan-edms
   ranges:
-  - type: GIT
-    events:
-    - introduced: "0"
+  - events:
+    - introduced: '0'
     - fixed: 398c480c10416d76e7c1dcb607e726e8fc988e72
     repo: https://github.com/mayan-edms/mayan-edms
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
+    type: GIT
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
   versions:
   - 1.0.0
   - 1.0.rc1
@@ -34,7 +25,7 @@ affected:
   - 2.0.0rc1
   - 2.0.1
   - 2.0.2
-  - "2.1"
+  - '2.1'
   - 2.1.1
   - 2.1.10
   - 2.1.11
@@ -45,30 +36,30 @@ affected:
   - 2.1.6
   - 2.1rc1
   - 2.1rc2
-  - "2.2"
+  - '2.2'
   - 2.2b1
   - 2.2b2
   - 2.2b3
   - 2.2rc1
-  - "2.3"
-  - "2.4"
-  - "2.5"
+  - '2.3'
+  - '2.4'
+  - '2.5'
   - 2.5.1
   - 2.5.2
-  - "2.6"
+  - '2.6'
   - 2.6.1
   - 2.6.2
   - 2.6.3
   - 2.6.4
-  - "2.7"
+  - '2.7'
   - 2.7.1
   - 2.7.2
   - 2.7.3
-  - "3.0"
+  - '3.0'
   - 3.0.1
   - 3.0.2
   - 3.0.3
-  - "3.1"
+  - '3.1'
   - 3.1.1
   - 3.1.10
   - 3.1.2
@@ -79,7 +70,7 @@ affected:
   - 3.1.7
   - 3.1.8
   - 3.1.9
-  - "3.2"
+  - '3.2'
   - 3.2.1
   - 3.2.10
   - 3.2.11
@@ -93,7 +84,7 @@ affected:
   - 3.2.9
   - 3.2b1
   - 3.2rc1
-  - "3.3"
+  - '3.3'
   - 3.3.1
   - 3.3.10
   - 3.3.11
@@ -112,7 +103,7 @@ affected:
   - 3.3.7
   - 3.3.8
   - 3.3.9
-  - "3.4"
+  - '3.4'
   - 3.4.1
   - 3.4.10
   - 3.4.11
@@ -135,7 +126,7 @@ affected:
   - 3.4.7
   - 3.4.8
   - 3.4.9
-  - "3.5"
+  - '3.5'
   - 3.5.1
   - 3.5.10
   - 3.5.11
@@ -148,7 +139,7 @@ affected:
   - 3.5.7
   - 3.5.8
   - 3.5.9
-  - "4.0"
+  - '4.0'
   - 4.0.1
   - 4.0.10
   - 4.0.11
@@ -180,7 +171,7 @@ affected:
   - 4.0rc1
   - 4.0rc2
   - 4.0rc3
-  - "4.1"
+  - '4.1'
   - 4.1.1
   - 4.1.10
   - 4.1.11
@@ -197,7 +188,7 @@ affected:
   - 4.1b2
   - 4.1rc1
   - 4.1rc2
-  - "4.2"
+  - '4.2'
   - 4.2.1
   - 4.2.10
   - 4.2.11
@@ -219,7 +210,7 @@ affected:
   - 4.2a1
   - 4.2b1
   - 4.2rc1
-  - "4.3"
+  - '4.3'
   - 4.3.1
   - 4.3.10
   - 4.3.11
@@ -234,7 +225,7 @@ affected:
   - 4.3.9
   - 4.3a1
   - 4.3rc1
-  - "4.4"
+  - '4.4'
   - 4.4.1
   - 4.4.10
   - 4.4.11
@@ -251,7 +242,7 @@ affected:
   - 4.4.7
   - 4.4.8
   - 4.4.9
-  - "4.5"
+  - '4.5'
   - 4.5.1
   - 4.5.10
   - 4.5.11
@@ -265,18 +256,27 @@ affected:
   - 4.5.7
   - 4.5.8
   - 4.5.9
-  - "4.6"
+  - '4.6'
   - 4.6.1
   - 4.6.2
   - 4.6.3
   - 4.6.4
   - 4.6.5
-  - "4.7"
+  - '4.7'
   - 4.7.1
-  - "4.8"
+  - '4.8'
   - 4.8.1
   - 4.8.2
   - 4.8.3
+aliases:
+- CVE-2014-3840
+details: Multiple cross-site scripting (XSS) vulnerabilities in apps/common/templates/calculate_form_title.html
+  in Mayan EDMS 0.13 allow remote authenticated users to inject arbitrary web script
+  or HTML via a (1) tag or the (2) title of a source in a Staging folder, (3) Name
+  field in a bootstrap setup, or Title field in a (4) smart link or (5) web form.
+id: PYSEC-2014-110
+modified: '2024-11-21T14:22:54.240407Z'
+published: '2014-05-27T13:55:00Z'
 references:
 - type: WEB
   url: http://www.securityfocus.com/bid/67552
@@ -296,3 +296,4 @@ references:
   url: https://github.com/mayan-edms/mayan-edms/commit/398c480c10416d76e7c1dcb607e726e8fc988e72
 - type: WEB
   url: http://www.exploit-db.com/exploits/33493
+withdrawn: '2024-11-22T04:37:04Z'

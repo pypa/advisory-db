@@ -1,19 +1,12 @@
-id: PYSEC-2019-250
-modified: 2024-11-21T14:22:50.820785Z
-published: 2019-01-21T06:29:00Z
-aliases:
-- CVE-2019-6498
-details: GattLib 0.2 has a stack-based buffer over-read in gattlib_connect in dbus/gattlib.c
-  because strncpy is misused.
 affected:
 - package:
     ecosystem: PyPI
     name: gattlib-py
     purl: pkg:pypi/gattlib-py
   ranges:
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
   versions:
   - 0.4.0
   - 0.4.1
@@ -35,9 +28,13 @@ affected:
   - 0.7.0
   - 0.7.1
   - 0.7.2
-severity:
-- type: CVSS_V3
-  score: CVSS:3.0/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
+aliases:
+- CVE-2019-6498
+details: GattLib 0.2 has a stack-based buffer over-read in gattlib_connect in dbus/gattlib.c
+  because strncpy is misused.
+id: PYSEC-2019-250
+modified: '2024-11-21T14:22:50.820785Z'
+published: '2019-01-21T06:29:00Z'
 references:
 - type: EVIDENCE
   url: https://github.com/labapart/gattlib/issues/82
@@ -53,3 +50,7 @@ references:
   url: https://www.exploit-db.com/exploits/46215/
 - type: ADVISORY
   url: https://www.exploit-db.com/exploits/46215/
+severity:
+- score: CVSS:3.0/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
+  type: CVSS_V3
+withdrawn: '2024-11-22T04:37:04Z'

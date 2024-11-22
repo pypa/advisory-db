@@ -1,24 +1,12 @@
-id: PYSEC-2022-43146
-modified: 2024-11-21T14:22:59.25812Z
-published: 2022-08-18T15:15:00Z
-aliases:
-- CVE-2022-36024
-- GHSA-qmhj-m29v-gvmr
-details: py-cord is a an API wrapper for Discord written in Python. Bots creating
-  using py-cord version 2.0.0 are vulnerable to remote shutdown if they are added
-  to the server with the `application.commands` scope without the `bot` scope. Currently,
-  it appears that all public bots that use slash commands are affected. This issue
-  has been patched in version 2.0.1. There are currently no recommended workarounds
-  - please upgrade to a patched version.
 affected:
 - package:
     ecosystem: PyPI
     name: py-cord
     purl: pkg:pypi/py-cord
   ranges:
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
   versions:
   - 1.7.3
   - 2.0.0
@@ -47,9 +35,18 @@ affected:
   - 2.5.0
   - 2.6.0
   - 2.6.1
-severity:
-- type: CVSS_V3
-  score: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H
+aliases:
+- CVE-2022-36024
+- GHSA-qmhj-m29v-gvmr
+details: py-cord is a an API wrapper for Discord written in Python. Bots creating
+  using py-cord version 2.0.0 are vulnerable to remote shutdown if they are added
+  to the server with the `application.commands` scope without the `bot` scope. Currently,
+  it appears that all public bots that use slash commands are affected. This issue
+  has been patched in version 2.0.1. There are currently no recommended workarounds
+  - please upgrade to a patched version.
+id: PYSEC-2022-43146
+modified: '2024-11-21T14:22:59.25812Z'
+published: '2022-08-18T15:15:00Z'
 references:
 - type: ADVISORY
   url: https://github.com/Pycord-Development/pycord/security/advisories/GHSA-qmhj-m29v-gvmr
@@ -57,3 +54,7 @@ references:
   url: https://github.com/Pycord-Development/pycord/pull/1568
 - type: WEB
   url: https://github.com/Pycord-Development/pycord/pull/1568
+severity:
+- score: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H
+  type: CVSS_V3
+withdrawn: '2024-11-22T04:37:05Z'

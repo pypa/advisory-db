@@ -1,22 +1,14 @@
-id: PYSEC-2018-146
-modified: 2024-11-21T14:22:49.282911Z
-published: 2018-03-25T03:29:00Z
-aliases:
-- CVE-2018-8976
-details: In Exiv2 0.26, jpgimage.cpp allows remote attackers to cause a denial of
-  service (image.cpp Exiv2::Internal::stringFormat out-of-bounds read) via a crafted
-  file.
 affected:
 - package:
     ecosystem: PyPI
     name: exiv2
     purl: pkg:pypi/exiv2
   ranges:
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
   versions:
-  - "0.1"
+  - '0.1'
   - 0.11.0
   - 0.11.1
   - 0.11.2
@@ -37,12 +29,17 @@ affected:
   - 0.16.3.post1
   - 0.17.0
   - 0.17.1
-  - "0.2"
-  - "0.3"
+  - '0.2'
+  - '0.3'
   - 0.3.1
-severity:
-- type: CVSS_V3
-  score: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H
+aliases:
+- CVE-2018-8976
+details: In Exiv2 0.26, jpgimage.cpp allows remote attackers to cause a denial of
+  service (image.cpp Exiv2::Internal::stringFormat out-of-bounds read) via a crafted
+  file.
+id: PYSEC-2018-146
+modified: '2024-11-21T14:22:49.282911Z'
+published: '2018-03-25T03:29:00Z'
 references:
 - type: EVIDENCE
   url: https://github.com/Exiv2/exiv2/issues/246
@@ -58,3 +55,7 @@ references:
   url: https://lists.debian.org/debian-lts-announce/2023/01/msg00004.html
 - type: WEB
   url: https://lists.debian.org/debian-lts-announce/2023/01/msg00004.html
+severity:
+- score: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H
+  type: CVSS_V3
+withdrawn: '2024-11-22T04:37:04Z'

@@ -1,20 +1,12 @@
-id: PYSEC-2008-13
-modified: 2024-11-21T14:22:55.267769Z
-published: 2008-07-30T18:41:00Z
-aliases:
-- CVE-2008-3381
-details: Multiple cross-site scripting (XSS) vulnerabilities in macro/AdvancedSearch.py
-  in moin (and MoinMoin) 1.6.3 and 1.7.0 allow remote attackers to inject arbitrary
-  web script or HTML via unspecified vectors.
 affected:
 - package:
     ecosystem: PyPI
     name: moin
     purl: pkg:pypi/moin
   ranges:
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
   versions:
   - 1.8.4
   - 1.8.5
@@ -34,6 +26,14 @@ affected:
   - 1.9.9
   - 2.0.0a1
   - 2.0.0b1
+aliases:
+- CVE-2008-3381
+details: Multiple cross-site scripting (XSS) vulnerabilities in macro/AdvancedSearch.py
+  in moin (and MoinMoin) 1.6.3 and 1.7.0 allow remote attackers to inject arbitrary
+  web script or HTML via unspecified vectors.
+id: PYSEC-2008-13
+modified: '2024-11-21T14:22:55.267769Z'
+published: '2008-07-30T18:41:00Z'
 references:
 - type: EVIDENCE
   url: http://hg.moinmo.in/moin/1.6/rev/8686a10f1f58
@@ -49,3 +49,4 @@ references:
   url: http://www.vupen.com/english/advisories/2008/2147/references
 - type: WEB
   url: https://exchange.xforce.ibmcloud.com/vulnerabilities/43899
+withdrawn: '2024-11-22T04:37:04Z'

@@ -1,20 +1,12 @@
-id: PYSEC-2022-43074
-modified: 2024-11-21T14:22:42.229096Z
-published: 2022-09-19T16:15:00Z
-aliases:
-- CVE-2022-38881
-details: The d8s-archives for python, as distributed on PyPI, included a potential
-  code-execution backdoor inserted by a third party. The backdoor is the democritus-strings
-  package. The affected version is 0.1.0.
 affected:
 - package:
     ecosystem: PyPI
     name: d8s-archives
     purl: pkg:pypi/d8s-archives
   ranges:
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
   versions:
   - 0.1.0
   - 0.2.0
@@ -25,9 +17,14 @@ affected:
   - 0.6.1
   - 0.6.2
   - 0.7.0
-severity:
-- type: CVSS_V3
-  score: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
+aliases:
+- CVE-2022-38881
+details: The d8s-archives for python, as distributed on PyPI, included a potential
+  code-execution backdoor inserted by a third party. The backdoor is the democritus-strings
+  package. The affected version is 0.1.0.
+id: PYSEC-2022-43074
+modified: '2024-11-21T14:22:42.229096Z'
+published: '2022-09-19T16:15:00Z'
 references:
 - type: PACKAGE
   url: https://pypi.org/project/d8s-archives/
@@ -37,3 +34,7 @@ references:
   url: https://github.com/democritus-project/d8s-archives/issues/12
 - type: REPORT
   url: https://github.com/democritus-project/d8s-archives/issues/12
+severity:
+- score: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
+  type: CVSS_V3
+withdrawn: '2024-11-22T04:37:03Z'

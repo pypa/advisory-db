@@ -1,24 +1,14 @@
-id: PYSEC-2018-124
-modified: 2024-11-21T14:22:47.758262Z
-published: 2018-02-12T22:29:00Z
-aliases:
-- CVE-2017-17725
-details: In Exiv2 0.26, there is an integer overflow leading to a heap-based buffer
-  over-read in the Exiv2::getULong function in types.cpp. Remote attackers can exploit
-  the vulnerability to cause a denial of service via a crafted image file. Note that
-  this vulnerability is different from CVE-2017-14864, which is an invalid memory
-  address dereference.
 affected:
 - package:
     ecosystem: PyPI
     name: exiv2
     purl: pkg:pypi/exiv2
   ranges:
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
   versions:
-  - "0.1"
+  - '0.1'
   - 0.11.0
   - 0.11.1
   - 0.11.2
@@ -39,12 +29,19 @@ affected:
   - 0.16.3.post1
   - 0.17.0
   - 0.17.1
-  - "0.2"
-  - "0.3"
+  - '0.2'
+  - '0.3'
   - 0.3.1
-severity:
-- type: CVSS_V3
-  score: CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H
+aliases:
+- CVE-2017-17725
+details: In Exiv2 0.26, there is an integer overflow leading to a heap-based buffer
+  over-read in the Exiv2::getULong function in types.cpp. Remote attackers can exploit
+  the vulnerability to cause a denial of service via a crafted image file. Note that
+  this vulnerability is different from CVE-2017-14864, which is an invalid memory
+  address dereference.
+id: PYSEC-2018-124
+modified: '2024-11-21T14:22:47.758262Z'
+published: '2018-02-12T22:29:00Z'
 references:
 - type: EVIDENCE
   url: https://github.com/Exiv2/exiv2/issues/188
@@ -54,3 +51,7 @@ references:
   url: https://bugzilla.redhat.com/show_bug.cgi?id=1525055
 - type: REPORT
   url: https://bugzilla.redhat.com/show_bug.cgi?id=1525055
+severity:
+- score: CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H
+  type: CVSS_V3
+withdrawn: '2024-11-22T04:37:04Z'

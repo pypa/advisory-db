@@ -1,22 +1,12 @@
-id: PYSEC-2015-40
-modified: 2024-11-21T14:22:51.843481Z
-published: 2015-08-20T20:59:00Z
-aliases:
-- CVE-2015-3219
-details: Cross-site scripting (XSS) vulnerability in the Orchestration/Stack section
-  in OpenStack Dashboard (Horizon) 2014.2 before 2014.2.4 and 2015.1.x before 2015.1.1
-  allows remote attackers to inject arbitrary web script or HTML via the description
-  parameter in a heat template, which is not properly handled in the help_text attribute
-  in the Field class.
 affected:
 - package:
     ecosystem: PyPI
     name: horizon
     purl: pkg:pypi/horizon
   ranges:
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
   versions:
   - 12.0.2
   - 12.0.3
@@ -106,6 +96,16 @@ affected:
   - 24.0.0
   - 25.0.0
   - 25.1.0
+aliases:
+- CVE-2015-3219
+details: Cross-site scripting (XSS) vulnerability in the Orchestration/Stack section
+  in OpenStack Dashboard (Horizon) 2014.2 before 2014.2.4 and 2015.1.x before 2015.1.1
+  allows remote attackers to inject arbitrary web script or HTML via the description
+  parameter in a heat template, which is not properly handled in the help_text attribute
+  in the Field class.
+id: PYSEC-2015-40
+modified: '2024-11-21T14:22:51.843481Z'
+published: '2015-08-20T20:59:00Z'
 references:
 - type: FIX
   url: http://lists.openstack.org/pipermail/openstack-announce/2015-June/000361.html
@@ -125,3 +125,4 @@ references:
   url: http://www.oracle.com/technetwork/topics/security/bulletinjul2015-2511963.html
 - type: ADVISORY
   url: http://rhn.redhat.com/errata/RHSA-2015-1679.html
+withdrawn: '2024-11-22T04:37:04Z'

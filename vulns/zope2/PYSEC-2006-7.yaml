@@ -1,21 +1,12 @@
-id: PYSEC-2006-7
-modified: 2024-11-21T14:23:03.576588Z
-published: 2006-07-07T23:05:00Z
-aliases:
-- CVE-2006-3458
-details: Zope 2.7.0 to 2.7.8, 2.8.0 to 2.8.7, and 2.9.0 to 2.9.3 (Zope2) does not
-  disable the "raw" command when providing untrusted users with restructured text
-  (reStructuredText) functionality from docutils, which allows local users to read
-  arbitrary files.
 affected:
 - package:
     ecosystem: PyPI
     name: zope2
     purl: pkg:pypi/zope2
   ranges:
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
   versions:
   - 2.12.0
   - 2.12.0.a1
@@ -92,7 +83,7 @@ affected:
   - 2.13.7
   - 2.13.8
   - 2.13.9
-  - "4.0"
+  - '4.0'
   - 4.0a1
   - 4.0a2
   - 4.0a3
@@ -100,6 +91,15 @@ affected:
   - 4.0a5
   - 4.0a6
   - 4.0b1
+aliases:
+- CVE-2006-3458
+details: Zope 2.7.0 to 2.7.8, 2.8.0 to 2.8.7, and 2.9.0 to 2.9.3 (Zope2) does not
+  disable the "raw" command when providing untrusted users with restructured text
+  (reStructuredText) functionality from docutils, which allows local users to read
+  arbitrary files.
+id: PYSEC-2006-7
+modified: '2024-11-21T14:23:03.576588Z'
+published: '2006-07-07T23:05:00Z'
 references:
 - type: WEB
   url: http://www.zope.org/Products/Zope/Hotfix-2006-07-05/Hotfix-20060705/README.txt
@@ -125,3 +125,4 @@ references:
   url: https://exchange.xforce.ibmcloud.com/vulnerabilities/27636
 - type: WEB
   url: https://usn.ubuntu.com/317-1/
+withdrawn: '2024-11-22T04:37:05Z'

@@ -1,20 +1,12 @@
-id: PYSEC-2015-39
-modified: 2024-11-21T14:22:51.397712Z
-published: 2015-08-19T15:59:00Z
-aliases:
-- CVE-2015-5163
-details: The import task action in OpenStack Image Service (Glance) 2015.1.x before
-  2015.1.2 (kilo), when using the V2 API, allows remote authenticated users to read
-  arbitrary files via a crafted backing file for a qcow2 image.
 affected:
 - package:
     ecosystem: PyPI
     name: glance
     purl: pkg:pypi/glance
   ranges:
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
   versions:
   - 15.0.2
   - 17.0.1
@@ -87,6 +79,14 @@ affected:
   - 29.0.0.0b2
   - 29.0.0.0b3
   - 29.0.0.0rc1
+aliases:
+- CVE-2015-5163
+details: The import task action in OpenStack Image Service (Glance) 2015.1.x before
+  2015.1.2 (kilo), when using the V2 API, allows remote authenticated users to read
+  arbitrary files via a crafted backing file for a qcow2 image.
+id: PYSEC-2015-39
+modified: '2024-11-21T14:22:51.397712Z'
+published: '2015-08-19T15:59:00Z'
 references:
 - type: WEB
   url: http://lists.openstack.org/pipermail/openstack-announce/2015-August/000527.html
@@ -96,3 +96,4 @@ references:
   url: https://bugs.launchpad.net/glance/+bug/1471912
 - type: WEB
   url: http://www.securityfocus.com/bid/76346
+withdrawn: '2024-11-22T04:37:04Z'

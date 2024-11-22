@@ -1,6 +1,14 @@
-id: PYSEC-2012-27
-modified: 2024-11-21T14:22:41.276629Z
-published: 2012-03-21T10:11:00Z
+affected:
+- package:
+    ecosystem: PyPI
+    name: bitdefender
+    purl: pkg:pypi/bitdefender
+  ranges:
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
+  versions:
+  - 0.0.1
 aliases:
 - CVE-2012-1461
 details: 'The Gzip file parser in AVG Anti-Virus 10.0.0.1190, Bitdefender 7.2, Command
@@ -15,17 +23,9 @@ details: 'The Gzip file parser in AVG Anti-Virus 10.0.0.1190, Bitdefender 7.2, C
   file with multiple compressed streams.  NOTE: this may later be SPLIT into multiple
   CVEs if additional information is published showing that the error occurred independently
   in different Gzip parser implementations.'
-affected:
-- package:
-    ecosystem: PyPI
-    name: bitdefender
-    purl: pkg:pypi/bitdefender
-  ranges:
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
-  versions:
-  - 0.0.1
+id: PYSEC-2012-27
+modified: '2024-11-21T14:22:41.276629Z'
+published: '2012-03-21T10:11:00Z'
 references:
 - type: WEB
   url: http://www.securityfocus.com/archive/1/522005
@@ -49,3 +49,4 @@ references:
   url: http://osvdb.org/80500
 - type: WEB
   url: http://osvdb.org/80501
+withdrawn: '2024-11-22T04:37:03Z'

@@ -1,21 +1,14 @@
-id: PYSEC-2021-883
-modified: 2024-11-21T14:22:49.973408Z
-published: 2021-08-23T22:15:00Z
-aliases:
-- CVE-2020-18773
-details: An invalid memory access in the decode function in iptc.cpp of Exiv2 0.27.99.0
-  allows attackers to cause a denial of service (DOS) via a crafted tif file.
 affected:
 - package:
     ecosystem: PyPI
     name: exiv2
     purl: pkg:pypi/exiv2
   ranges:
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
   versions:
-  - "0.1"
+  - '0.1'
   - 0.11.0
   - 0.11.1
   - 0.11.2
@@ -36,12 +29,16 @@ affected:
   - 0.16.3.post1
   - 0.17.0
   - 0.17.1
-  - "0.2"
-  - "0.3"
+  - '0.2'
+  - '0.3'
   - 0.3.1
-severity:
-- type: CVSS_V3
-  score: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H
+aliases:
+- CVE-2020-18773
+details: An invalid memory access in the decode function in iptc.cpp of Exiv2 0.27.99.0
+  allows attackers to cause a denial of service (DOS) via a crafted tif file.
+id: PYSEC-2021-883
+modified: '2024-11-21T14:22:49.973408Z'
+published: '2021-08-23T22:15:00Z'
 references:
 - type: EVIDENCE
   url: https://github.com/Exiv2/exiv2/issues/760
@@ -49,3 +46,7 @@ references:
   url: https://github.com/Exiv2/exiv2/issues/760
 - type: ADVISORY
   url: https://security.gentoo.org/glsa/202312-06
+severity:
+- score: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H
+  type: CVSS_V3
+withdrawn: '2024-11-22T04:37:04Z'

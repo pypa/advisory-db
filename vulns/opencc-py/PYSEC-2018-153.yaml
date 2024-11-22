@@ -1,28 +1,29 @@
-id: PYSEC-2018-153
-modified: 2024-11-21T14:22:57.249534Z
-published: 2018-09-13T02:29:00Z
-aliases:
-- CVE-2018-16982
-details: Open Chinese Convert (OpenCC) 1.0.5 allows attackers to cause a denial of
-  service (segmentation fault) because BinaryDict::NewFromFile in BinaryDict.cpp may
-  have out-of-bounds keyOffset and valueOffset values via a crafted .ocd file.
 affected:
 - package:
     ecosystem: PyPI
     name: opencc-py
     purl: pkg:pypi/opencc-py
   ranges:
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
   versions:
   - 1.0.6
   - 1.1.0
-severity:
-- type: CVSS_V3
-  score: CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H
+aliases:
+- CVE-2018-16982
+details: Open Chinese Convert (OpenCC) 1.0.5 allows attackers to cause a denial of
+  service (segmentation fault) because BinaryDict::NewFromFile in BinaryDict.cpp may
+  have out-of-bounds keyOffset and valueOffset values via a crafted .ocd file.
+id: PYSEC-2018-153
+modified: '2024-11-21T14:22:57.249534Z'
+published: '2018-09-13T02:29:00Z'
 references:
 - type: EVIDENCE
   url: https://github.com/BYVoid/OpenCC/issues/303
 - type: ADVISORY
   url: https://github.com/BYVoid/OpenCC/issues/303
+severity:
+- score: CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H
+  type: CVSS_V3
+withdrawn: '2024-11-22T04:37:04Z'

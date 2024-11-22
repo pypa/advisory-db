@@ -1,21 +1,12 @@
-id: PYSEC-2013-44
-modified: 2024-11-21T14:22:56.735821Z
-published: 2013-03-22T21:55:00Z
-aliases:
-- CVE-2013-1838
-details: OpenStack Compute (Nova) Grizzly, Folsom (2012.2), and Essex (2012.1) does
-  not properly implement a quota for fixed IPs, which allows remote authenticated
-  users to cause a denial of service (resource exhaustion and failure to spawn new
-  instances) via a large number of calls to the addFixedIp function.
 affected:
 - package:
     ecosystem: PyPI
     name: nova
     purl: pkg:pypi/nova
   ranges:
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
   versions:
   - 15.1.5
   - 16.1.6
@@ -135,6 +126,15 @@ affected:
   - 29.2.0
   - 30.0.0
   - 30.0.0.0rc1
+aliases:
+- CVE-2013-1838
+details: OpenStack Compute (Nova) Grizzly, Folsom (2012.2), and Essex (2012.1) does
+  not properly implement a quota for fixed IPs, which allows remote authenticated
+  users to cause a denial of service (resource exhaustion and failure to spawn new
+  instances) via a large number of calls to the addFixedIp function.
+id: PYSEC-2013-44
+modified: '2024-11-21T14:22:56.735821Z'
+published: '2013-03-22T21:55:00Z'
 references:
 - type: WEB
   url: https://review.openstack.org/#/c/24453/
@@ -164,3 +164,4 @@ references:
   url: http://rhn.redhat.com/errata/RHSA-2013-0709.html
 - type: WEB
   url: https://exchange.xforce.ibmcloud.com/vulnerabilities/82877
+withdrawn: '2024-11-22T04:37:04Z'

@@ -1,20 +1,14 @@
-id: PYSEC-2018-130
-modified: 2024-11-21T14:22:48.306556Z
-published: 2018-05-29T07:29:00Z
-aliases:
-- CVE-2018-11531
-details: Exiv2 0.26 has a heap-based buffer overflow in getData in preview.cpp.
 affected:
 - package:
     ecosystem: PyPI
     name: exiv2
     purl: pkg:pypi/exiv2
   ranges:
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
   versions:
-  - "0.1"
+  - '0.1'
   - 0.11.0
   - 0.11.1
   - 0.11.2
@@ -35,12 +29,15 @@ affected:
   - 0.16.3.post1
   - 0.17.0
   - 0.17.1
-  - "0.2"
-  - "0.3"
+  - '0.2'
+  - '0.3'
   - 0.3.1
-severity:
-- type: CVSS_V3
-  score: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
+aliases:
+- CVE-2018-11531
+details: Exiv2 0.26 has a heap-based buffer overflow in getData in preview.cpp.
+id: PYSEC-2018-130
+modified: '2024-11-21T14:22:48.306556Z'
+published: '2018-05-29T07:29:00Z'
 references:
 - type: EVIDENCE
   url: https://github.com/Exiv2/exiv2/issues/283
@@ -56,3 +53,7 @@ references:
   url: https://usn.ubuntu.com/3700-1/
 - type: ADVISORY
   url: https://security.gentoo.org/glsa/201811-14
+severity:
+- score: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
+  type: CVSS_V3
+withdrawn: '2024-11-22T04:37:04Z'

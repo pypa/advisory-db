@@ -1,22 +1,14 @@
-id: PYSEC-2017-125
-modified: 2024-11-21T14:22:46.598979Z
-published: 2017-07-24T01:29:00Z
-aliases:
-- CVE-2017-11592
-details: There is a Mismatched Memory Management Routines vulnerability in the Exiv2::FileIo::seek
-  function of Exiv2 0.26 that will lead to a remote denial of service attack (heap
-  memory corruption) via crafted input.
 affected:
 - package:
     ecosystem: PyPI
     name: exiv2
     purl: pkg:pypi/exiv2
   ranges:
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
   versions:
-  - "0.1"
+  - '0.1'
   - 0.11.0
   - 0.11.1
   - 0.11.2
@@ -37,14 +29,23 @@ affected:
   - 0.16.3.post1
   - 0.17.0
   - 0.17.1
-  - "0.2"
-  - "0.3"
+  - '0.2'
+  - '0.3'
   - 0.3.1
-severity:
-- type: CVSS_V3
-  score: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+aliases:
+- CVE-2017-11592
+details: There is a Mismatched Memory Management Routines vulnerability in the Exiv2::FileIo::seek
+  function of Exiv2 0.26 that will lead to a remote denial of service attack (heap
+  memory corruption) via crafted input.
+id: PYSEC-2017-125
+modified: '2024-11-21T14:22:46.598979Z'
+published: '2017-07-24T01:29:00Z'
 references:
 - type: EVIDENCE
   url: https://bugzilla.redhat.com/show_bug.cgi?id=1473889
 - type: REPORT
   url: https://bugzilla.redhat.com/show_bug.cgi?id=1473889
+severity:
+- score: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+  type: CVSS_V3
+withdrawn: '2024-11-22T04:37:04Z'

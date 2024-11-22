@@ -1,21 +1,12 @@
-id: PYSEC-2014-106
-modified: 2024-11-21T14:22:52.734949Z
-published: 2014-04-15T14:55:00Z
-aliases:
-- CVE-2014-2828
-details: The V3 API in OpenStack Identity (Keystone) 2013.1 before 2013.2.4 and icehouse
-  before icehouse-rc2 allows remote attackers to cause a denial of service (CPU consumption)
-  via a large number of the same authentication method in a request, aka "authentication
-  chaining."
 affected:
 - package:
     ecosystem: PyPI
     name: keystone
     purl: pkg:pypi/keystone
   ranges:
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
   versions:
   - 12.0.2
   - 12.0.3
@@ -66,6 +57,15 @@ affected:
   - 25.0.0.0rc1
   - 26.0.0
   - 26.0.0.0rc1
+aliases:
+- CVE-2014-2828
+details: The V3 API in OpenStack Identity (Keystone) 2013.1 before 2013.2.4 and icehouse
+  before icehouse-rc2 allows remote attackers to cause a denial of service (CPU consumption)
+  via a large number of the same authentication method in a request, aka "authentication
+  chaining."
+id: PYSEC-2014-106
+modified: '2024-11-21T14:22:52.734949Z'
+published: '2014-04-15T14:55:00Z'
 references:
 - type: WEB
   url: http://www.openwall.com/lists/oss-security/2014/04/10/20
@@ -73,3 +73,4 @@ references:
   url: https://bugs.launchpad.net/keystone/+bug/1300274
 - type: ADVISORY
   url: http://rhn.redhat.com/errata/RHSA-2014-1688.html
+withdrawn: '2024-11-22T04:37:04Z'

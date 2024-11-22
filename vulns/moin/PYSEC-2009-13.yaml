@@ -1,20 +1,12 @@
-id: PYSEC-2009-13
-modified: 2024-11-21T14:22:55.369914Z
-published: 2009-04-03T18:30:00Z
-aliases:
-- CVE-2008-6603
-details: MoinMoin 1.6.2 and 1.7 does not properly enforce ACL checks when acl_hierarchic
-  is set to True, which might allow remote attackers to bypass intended access restrictions,
-  a different vulnerability than CVE-2008-1937.
 affected:
 - package:
     ecosystem: PyPI
     name: moin
     purl: pkg:pypi/moin
   ranges:
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
   versions:
   - 1.8.4
   - 1.8.5
@@ -34,6 +26,14 @@ affected:
   - 1.9.9
   - 2.0.0a1
   - 2.0.0b1
+aliases:
+- CVE-2008-6603
+details: MoinMoin 1.6.2 and 1.7 does not properly enforce ACL checks when acl_hierarchic
+  is set to True, which might allow remote attackers to bypass intended access restrictions,
+  a different vulnerability than CVE-2008-1937.
+id: PYSEC-2009-13
+modified: '2024-11-21T14:22:55.369914Z'
+published: '2009-04-03T18:30:00Z'
 references:
 - type: WEB
   url: http://osvdb.org/48875
@@ -51,3 +51,4 @@ references:
   url: http://www.securityfocus.com/bid/34655
 - type: WEB
   url: https://exchange.xforce.ibmcloud.com/vulnerabilities/41911
+withdrawn: '2024-11-22T04:37:04Z'

@@ -1,19 +1,12 @@
-id: PYSEC-2019-252
-modified: 2024-11-21T14:22:59.57901Z
-published: 2019-02-07T07:29:00Z
-aliases:
-- CVE-2019-7560
-details: In parser/btorsmt2.c in Boolector 3.0.0, opening a specially crafted input
-  file leads to a use after free in get_failed_assumptions or btor_delete.
 affected:
 - package:
     ecosystem: PyPI
     name: pyboolector
     purl: pkg:pypi/pyboolector
   ranges:
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
   versions:
   - 3.0.0.1
   - 3.0.0.20191102.28
@@ -125,9 +118,13 @@ affected:
   - 3.2.3.20240822.1
   - 3.2.3.20240822.20
   - 3.2.4.20240823.1
-severity:
-- type: CVSS_V3
-  score: CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H
+aliases:
+- CVE-2019-7560
+details: In parser/btorsmt2.c in Boolector 3.0.0, opening a specially crafted input
+  file leads to a use after free in get_failed_assumptions or btor_delete.
+id: PYSEC-2019-252
+modified: '2024-11-21T14:22:59.57901Z'
+published: '2019-02-07T07:29:00Z'
 references:
 - type: EVIDENCE
   url: https://github.com/Boolector/boolector/issues/29
@@ -141,3 +138,7 @@ references:
   url: https://github.com/Boolector/boolector/issues/28
 - type: REPORT
   url: https://github.com/Boolector/boolector/issues/28
+severity:
+- score: CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H
+  type: CVSS_V3
+withdrawn: '2024-11-22T04:37:05Z'

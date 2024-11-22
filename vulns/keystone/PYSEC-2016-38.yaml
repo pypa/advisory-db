@@ -1,20 +1,12 @@
-id: PYSEC-2016-38
-modified: 2024-11-21T14:22:52.950772Z
-published: 2016-06-13T14:59:00Z
-aliases:
-- CVE-2016-4911
-details: The Fernet Token Provider in OpenStack Identity (Keystone) 9.0.x before 9.0.1
-  (mitaka) allows remote authenticated users to prevent revocation of a chain of tokens
-  and bypass intended access restrictions by rescoping a token.
 affected:
 - package:
     ecosystem: PyPI
     name: keystone
     purl: pkg:pypi/keystone
   ranges:
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
   versions:
   - 12.0.2
   - 12.0.3
@@ -65,9 +57,14 @@ affected:
   - 25.0.0.0rc1
   - 26.0.0
   - 26.0.0.0rc1
-severity:
-- type: CVSS_V3
-  score: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N
+aliases:
+- CVE-2016-4911
+details: The Fernet Token Provider in OpenStack Identity (Keystone) 9.0.x before 9.0.1
+  (mitaka) allows remote authenticated users to prevent revocation of a chain of tokens
+  and bypass intended access restrictions by rescoping a token.
+id: PYSEC-2016-38
+modified: '2024-11-21T14:22:52.950772Z'
+published: '2016-06-13T14:59:00Z'
 references:
 - type: ARTICLE
   url: http://www.openwall.com/lists/oss-security/2016/05/17/10
@@ -85,3 +82,7 @@ references:
   url: http://www.securityfocus.com/bid/90728
 - type: ADVISORY
   url: http://www.securityfocus.com/bid/90728
+severity:
+- score: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N
+  type: CVSS_V3
+withdrawn: '2024-11-22T04:37:04Z'

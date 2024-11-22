@@ -1,18 +1,12 @@
-id: PYSEC-2019-243
-modified: 2024-11-21T14:22:45.251201Z
-published: 2019-11-22T15:15:00Z
-aliases:
-- CVE-2015-5694
-details: Designate does not enforce the DNS protocol limit concerning record set sizes
 affected:
 - package:
     ecosystem: PyPI
     name: designate
     purl: pkg:pypi/designate
   ranges:
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
   versions:
   - 10.0.0
   - 10.0.0.0rc1
@@ -64,9 +58,12 @@ affected:
   - 9.0.0.0rc1
   - 9.0.1
   - 9.0.2
-severity:
-- type: CVSS_V3
-  score: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H
+aliases:
+- CVE-2015-5694
+details: Designate does not enforce the DNS protocol limit concerning record set sizes
+id: PYSEC-2019-243
+modified: '2024-11-21T14:22:45.251201Z'
+published: '2019-11-22T15:15:00Z'
 references:
 - type: REPORT
   url: https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2015-5694
@@ -80,3 +77,7 @@ references:
   url: http://www.openwall.com/lists/oss-security/2015/07/29/6
 - type: WEB
   url: http://www.openwall.com/lists/oss-security/2015/07/29/6
+severity:
+- score: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H
+  type: CVSS_V3
+withdrawn: '2024-11-22T04:37:03Z'

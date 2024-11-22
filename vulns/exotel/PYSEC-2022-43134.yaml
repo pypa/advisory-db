@@ -1,28 +1,25 @@
-id: PYSEC-2022-43134
-modified: 2024-11-21T14:22:50.316894Z
-published: 2022-08-27T20:15:00Z
-aliases:
-- CVE-2022-38792
-details: The exotel (aka exotel-py) package in PyPI as of 0.1.6 includes a code execution
-  backdoor inserted by a third party.
 affected:
 - package:
     ecosystem: PyPI
     name: exotel
     purl: pkg:pypi/exotel
   ranges:
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
   versions:
   - 0.1.0
   - 0.1.1
   - 0.1.3
   - 0.1.4
   - 0.1.5
-severity:
-- type: CVSS_V3
-  score: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
+aliases:
+- CVE-2022-38792
+details: The exotel (aka exotel-py) package in PyPI as of 0.1.6 includes a code execution
+  backdoor inserted by a third party.
+id: PYSEC-2022-43134
+modified: '2024-11-21T14:22:50.316894Z'
+published: '2022-08-27T20:15:00Z'
 references:
 - type: REPORT
   url: https://github.com/jertel/elastalert2/pull/931
@@ -36,3 +33,7 @@ references:
   url: https://pypi.org/project/exotel/
 - type: REPORT
   url: https://github.com/sarathsp06/exotel-py/issues/10
+severity:
+- score: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
+  type: CVSS_V3
+withdrawn: '2024-11-22T04:37:04Z'

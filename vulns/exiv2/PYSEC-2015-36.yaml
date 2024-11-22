@@ -1,22 +1,14 @@
-id: PYSEC-2015-36
-modified: 2024-11-21T14:22:45.931449Z
-published: 2015-01-02T20:59:00Z
-aliases:
-- CVE-2014-9449
-details: Buffer overflow in the RiffVideo::infoTagsHandler function in riffvideo.cpp
-  in Exiv2 0.24 allows remote attackers to cause a denial of service (crash) via a
-  long IKEY INFO tag value in an AVI file.
 affected:
 - package:
     ecosystem: PyPI
     name: exiv2
     purl: pkg:pypi/exiv2
   ranges:
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
   versions:
-  - "0.1"
+  - '0.1'
   - 0.11.0
   - 0.11.1
   - 0.11.2
@@ -37,9 +29,17 @@ affected:
   - 0.16.3.post1
   - 0.17.0
   - 0.17.1
-  - "0.2"
-  - "0.3"
+  - '0.2'
+  - '0.3'
   - 0.3.1
+aliases:
+- CVE-2014-9449
+details: Buffer overflow in the RiffVideo::infoTagsHandler function in riffvideo.cpp
+  in Exiv2 0.24 allows remote attackers to cause a denial of service (crash) via a
+  long IKEY INFO tag value in an AVI file.
+id: PYSEC-2015-36
+modified: '2024-11-21T14:22:45.931449Z'
+published: '2015-01-02T20:59:00Z'
 references:
 - type: REPORT
   url: http://dev.exiv2.org/issues/960
@@ -57,3 +57,4 @@ references:
   url: https://security.gentoo.org/glsa/201507-03
 - type: ADVISORY
   url: http://www.ubuntu.com/usn/USN-2454-1
+withdrawn: '2024-11-22T04:37:03Z'

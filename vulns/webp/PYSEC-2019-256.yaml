@@ -1,18 +1,12 @@
-id: PYSEC-2019-256
-modified: 2024-11-21T14:23:03.194401Z
-published: 2019-05-23T18:29:00Z
-aliases:
-- CVE-2016-9969
-details: In libwebp 0.5.1, there is a double free bug in libwebpmux.
 affected:
 - package:
     ecosystem: PyPI
     name: webp
     purl: pkg:pypi/webp
   ranges:
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
   versions:
   - 0.1.0
   - 0.1.0a10
@@ -38,9 +32,12 @@ affected:
   - 0.2.0
   - 0.3.0
   - 0.4.0
-severity:
-- type: CVSS_V3
-  score: CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H
+aliases:
+- CVE-2016-9969
+details: In libwebp 0.5.1, there is a double free bug in libwebpmux.
+id: PYSEC-2019-256
+modified: '2024-11-21T14:23:03.194401Z'
+published: '2019-05-23T18:29:00Z'
 references:
 - type: REPORT
   url: https://bugs.chromium.org/p/webp/issues/detail?id=322
@@ -48,3 +45,7 @@ references:
   url: https://bugs.chromium.org/p/webp/issues/detail?id=322
 - type: WEB
   url: https://bugs.chromium.org/p/webp/issues/detail?id=322
+severity:
+- score: CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H
+  type: CVSS_V3
+withdrawn: '2024-11-22T04:37:05Z'

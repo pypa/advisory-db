@@ -1,19 +1,12 @@
-id: PYSEC-2023-302
-modified: 2024-11-21T14:23:02.508814Z
-published: 2023-11-20T23:15:00Z
-aliases:
-- CVE-2023-48051
-details: An issue in /upydev/keygen.py in upydev v0.4.3 allows attackers to decrypt
-  sensitive information via weak encryption padding.
 affected:
 - package:
     ecosystem: PyPI
     name: upydev
     purl: pkg:pypi/upydev
   ranges:
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
   versions:
   - 0.0.1
   - 0.0.2
@@ -58,11 +51,19 @@ affected:
   - 0.4.1
   - 0.4.2
   - 0.4.3
-severity:
-- type: CVSS_V3
-  score: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
+aliases:
+- CVE-2023-48051
+details: An issue in /upydev/keygen.py in upydev v0.4.3 allows attackers to decrypt
+  sensitive information via weak encryption padding.
+id: PYSEC-2023-302
+modified: '2024-11-21T14:23:02.508814Z'
+published: '2023-11-20T23:15:00Z'
 references:
 - type: EVIDENCE
   url: https://github.com/Carglglz/upydev/issues/38
 - type: REPORT
   url: https://github.com/Carglglz/upydev/issues/38
+severity:
+- score: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
+  type: CVSS_V3
+withdrawn: '2024-11-22T04:37:05Z'

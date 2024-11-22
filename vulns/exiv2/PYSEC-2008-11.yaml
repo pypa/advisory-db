@@ -1,23 +1,14 @@
-id: PYSEC-2008-11
-modified: 2024-11-21T14:22:45.866207Z
-published: 2008-06-13T19:41:00Z
-aliases:
-- CVE-2008-2696
-details: Exiv2 0.16 allows user-assisted remote attackers to cause a denial of service
-  (divide-by-zero and application crash) via a zero value in Nikon lens information
-  in the metadata of an image, related to "pretty printing" and the RationalValue::toLong
-  function.
 affected:
 - package:
     ecosystem: PyPI
     name: exiv2
     purl: pkg:pypi/exiv2
   ranges:
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
   versions:
-  - "0.1"
+  - '0.1'
   - 0.11.0
   - 0.11.1
   - 0.11.2
@@ -38,9 +29,18 @@ affected:
   - 0.16.3.post1
   - 0.17.0
   - 0.17.1
-  - "0.2"
-  - "0.3"
+  - '0.2'
+  - '0.3'
   - 0.3.1
+aliases:
+- CVE-2008-2696
+details: Exiv2 0.16 allows user-assisted remote attackers to cause a denial of service
+  (divide-by-zero and application crash) via a zero value in Nikon lens information
+  in the metadata of an image, related to "pretty printing" and the RationalValue::toLong
+  function.
+id: PYSEC-2008-11
+modified: '2024-11-21T14:22:45.866207Z'
+published: '2008-06-13T19:41:00Z'
 references:
 - type: EVIDENCE
   url: http://bugzilla.gnome.org/show_bug.cgi?id=524715
@@ -64,3 +64,4 @@ references:
   url: http://www.vupen.com/english/advisories/2008/1766/references
 - type: WEB
   url: https://exchange.xforce.ibmcloud.com/vulnerabilities/42885
+withdrawn: '2024-11-22T04:37:03Z'

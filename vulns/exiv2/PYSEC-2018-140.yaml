@@ -1,22 +1,14 @@
-id: PYSEC-2018-140
-modified: 2024-11-21T14:22:48.914006Z
-published: 2018-11-03T04:29:00Z
-aliases:
-- CVE-2018-18915
-details: There is an infinite loop in the Exiv2::Image::printIFDStructure function
-  of image.cpp in Exiv2 0.27-RC1. A crafted input will lead to a remote denial of
-  service attack.
 affected:
 - package:
     ecosystem: PyPI
     name: exiv2
     purl: pkg:pypi/exiv2
   ranges:
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
   versions:
-  - "0.1"
+  - '0.1'
   - 0.11.0
   - 0.11.1
   - 0.11.2
@@ -37,12 +29,17 @@ affected:
   - 0.16.3.post1
   - 0.17.0
   - 0.17.1
-  - "0.2"
-  - "0.3"
+  - '0.2'
+  - '0.3'
   - 0.3.1
-severity:
-- type: CVSS_V3
-  score: CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H
+aliases:
+- CVE-2018-18915
+details: There is an infinite loop in the Exiv2::Image::printIFDStructure function
+  of image.cpp in Exiv2 0.27-RC1. A crafted input will lead to a remote denial of
+  service attack.
+id: PYSEC-2018-140
+modified: '2024-11-21T14:22:48.914006Z'
+published: '2018-11-03T04:29:00Z'
 references:
 - type: EVIDENCE
   url: https://github.com/Exiv2/exiv2/issues/511
@@ -52,3 +49,7 @@ references:
   url: https://github.com/Exiv2/exiv2/issues/511
 - type: ADVISORY
   url: https://access.redhat.com/errata/RHSA-2019:2101
+severity:
+- score: CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H
+  type: CVSS_V3
+withdrawn: '2024-11-22T04:37:04Z'

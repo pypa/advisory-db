@@ -1,23 +1,12 @@
-id: PYSEC-2016-39
-modified: 2024-11-21T14:23:01.531112Z
-published: 2016-12-23T22:59:00Z
-aliases:
-- CVE-2016-9037
-details: An exploitable out-of-bounds array access vulnerability exists in the xrow_header_decode
-  function of Tarantool 1.7.2.0-g8e92715. A specially crafted packet can cause the
-  function to access an element outside the bounds of a global array that is used
-  to determine the type of the specified key's value. This can lead to an out of bounds
-  read within the context of the server. An attacker who exploits this vulnerability
-  can cause a denial of service vulnerability on the server.
 affected:
 - package:
     ecosystem: PyPI
     name: tarantool
     purl: pkg:pypi/tarantool
   ranges:
-  - type: ECOSYSTEM
-    events:
-    - introduced: "0"
+  - events:
+    - introduced: '0'
+    type: ECOSYSTEM
   versions:
   - 0.10.0
   - 0.11.0
@@ -50,9 +39,17 @@ affected:
   - 1.1.1
   - 1.1.2
   - 1.2.0
-severity:
-- type: CVSS_V3
-  score: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+aliases:
+- CVE-2016-9037
+details: An exploitable out-of-bounds array access vulnerability exists in the xrow_header_decode
+  function of Tarantool 1.7.2.0-g8e92715. A specially crafted packet can cause the
+  function to access an element outside the bounds of a global array that is used
+  to determine the type of the specified key's value. This can lead to an out of bounds
+  read within the context of the server. An attacker who exploits this vulnerability
+  can cause a denial of service vulnerability on the server.
+id: PYSEC-2016-39
+modified: '2024-11-21T14:23:01.531112Z'
+published: '2016-12-23T22:59:00Z'
 references:
 - type: EVIDENCE
   url: http://www.talosintelligence.com/reports/TALOS-2016-0255/
@@ -62,3 +59,7 @@ references:
   url: http://www.securityfocus.com/bid/95063
 - type: ADVISORY
   url: http://www.securityfocus.com/bid/95063
+severity:
+- score: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+  type: CVSS_V3
+withdrawn: '2024-11-22T04:37:05Z'
