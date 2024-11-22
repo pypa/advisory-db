@@ -17,16 +17,16 @@ jobs:
         wget http://pypa-advisory-db.storage.googleapis.com/triage/pypi_links.json
         wget http://pypa-advisory-db.storage.googleapis.com/triage/pypi_versions.json
     - run: |
-        wget https://nvd.nist.gov/feeds/json/cve/1.1/nvdcve-1.1-modified.json.zip
-        unzip nvdcve-1.1-modified.json.zip
+        wget https://storage.googleapis.com/cve-osv-conversion/nvd/nvdcve-2.0-2024.json
     - run: |
-        go install github.com/google/osv/vulnfeeds/cmd/pypi@v0.0.0-20231127000918-ec867e7fd72b
+        go install github.com/google/osv/vulnfeeds/cmd/pypi@master
         pypi -false_positives triage/false_positives.yaml \
-            -nvd_json nvdcve-1.1-modified.json \
+            -nvd_json nvdcve-2.0-2024.json \
             -pypi_links pypi_links.json \
             -pypi_versions pypi_versions.json \
             -out_dir vulns \
-            -without_notes
+            -without_notes \
+            -exclude_unbounded
         git config user.name github-actions
         git config user.email github-actions@github.com
         git add vulns
