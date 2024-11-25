@@ -5,3 +5,11 @@ repos:
   - id: check-jsonschema
     files: "^vulns/[a-z0-9_-]+/.+\\.yaml"
     args: [--schemafile, "https://raw.githubusercontent.com/ossf/osv-schema/refs/tags/v1.6.7/validation/schema.json", --no-cache]
+- repo: https://github.com/jackdewinter/pymarkdown
+  rev: v0.9.25
+  hooks:
+    - id: pymarkdown
+      args:
+      - -d
+      - MD013
+      - scan

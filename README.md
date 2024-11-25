@@ -1,7 +1,7 @@
 # Python Packaging Advisory Database
 
 This is community owned repository of advisories for packages published on
-https://pypi.org.
+<https://pypi.org>.
 
 Advisories live in the [vulns](vulns/) directory and use a YAML encoding of
 a [simple format](https://ossf.github.io/osv-schema/).
@@ -9,6 +9,7 @@ a [simple format](https://ossf.github.io/osv-schema/).
 ## Contributing advisories
 
 ### Making a pull request
+
 Existing entries can be edited by simply creating a pull request.
 
 To introduce a new entry, create a pull request with a new file that has a name
@@ -18,10 +19,11 @@ automation to allocate a proper ID once merged.
 You can validate the structure of your YAML file by running:
 
 ```bash
- pipx run check-jsonschema --schemafile https://raw.githubusercontent.com/ossf/osv-schema/main/validation/schema.json <PATH TO YAML FILE>
- ```
+pipx run check-jsonschema --schemafile https://raw.githubusercontent.com/ossf/osv-schema/main/validation/schema.json <PATH TO YAML FILE>
+```
 
 ### Triage process
+
 Much of the existing set of vulnerabilities are collected from the
 [NVD CVE](https://nvd.nist.gov/vuln/data-feeds) feed.
 
@@ -33,6 +35,7 @@ generate the `.yaml` entries here.
 ## Using this data
 
 ### Marking specific attributes as vulnerable
+
 To help with reducing false positive matches, entries in this database can include details on specific code elements of a package that are vulnerable.
 OSV entries in this database have the following [`ecosystem_specific`](https://ossf.github.io/osv-schema/#affectedecosystem_specific-field) definition to encode this:
 
@@ -46,8 +49,10 @@ OSV entries in this database have the following [`ecosystem_specific`](https://o
   ]
 }
 ```
+
 "imports" is a JSON array containing the modules and attributes affected by the vulnerability...
 For example, a vulnerability that affects PIL::ImageFont can be represented as...
+
 ```json
 "imports": [
   {
@@ -56,7 +61,9 @@ For example, a vulnerability that affects PIL::ImageFont can be represented as..
   }
 ]
 ```
-which is equivalent to `PIL:ImageFont`. If a second attribute `ImageFont2` is also affected, then a second import entry needs to be added to the `imports` array. 
+
+which is equivalent to `PIL:ImageFont`. If a second attribute `ImageFont2` is also affected, then a second import entry needs to be added to the `imports` array.
+
 ```json
 "imports": [
   { "attribute": "ImageFont", "modules": ["PIL"] },
@@ -64,9 +71,10 @@ which is equivalent to `PIL:ImageFont`. If a second attribute `ImageFont2` is al
 ]
 ```
 
-Attributes which are accessible via multiple paths may be represented in a condensed form. Consider the attribute `django.db.models:JSONField` from the [django project](https://github.com/django/django/blob/0ee2b8c326d47387bacb713a3ab369fa9a7a22ee/django/db/models/__init__.py#L99) 
+Attributes which are accessible via multiple paths may be represented in a condensed form. Consider the attribute `django.db.models:JSONField` from the [django project](https://github.com/django/django/blob/0ee2b8c326d47387bacb713a3ab369fa9a7a22ee/django/db/models/__init__.py#L99).
 The attribute `django.db.models:JSONField` is a re-export of `django.db.models.fields.json:JSONField` and both are valid paths.
-These can be condensed to a more compact OSV representation as 
+These can be condensed to a more compact OSV representation as:
+
 ```json
 {
   "attribute": "JSONField",
@@ -113,5 +121,6 @@ This data has also been integrated into the
 [PyPI JSON API](https://warehouse.pypa.io/api-reference/json.html#known-vulnerabilities).
 
 ## Code of Conduct
+
 Everyone interacting with this project is expected to follow the
 [PSF Code of Conduct](https://github.com/pypa/.github/blob/main/CODE_OF_CONDUCT.md).
