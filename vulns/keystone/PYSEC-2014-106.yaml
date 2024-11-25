@@ -6,65 +6,17 @@ affected:
   ranges:
   - events:
     - introduced: '0'
+    - fixed: 8.0.0a0
     type: ECOSYSTEM
-  versions:
-  - 12.0.2
-  - 12.0.3
-  - 13.0.2
-  - 13.0.3
-  - 13.0.4
-  - 14.0.0
-  - 14.0.1
-  - 14.1.0
-  - 14.2.0
-  - 15.0.0
-  - 15.0.0.0rc1
-  - 15.0.0.0rc2
-  - 15.0.1
-  - 16.0.0
-  - 16.0.0.0rc1
-  - 16.0.0.0rc2
-  - 16.0.1
-  - 16.0.2
-  - 17.0.0
-  - 17.0.0.0rc1
-  - 17.0.0.0rc2
-  - 17.0.1
-  - 18.0.0
-  - 18.0.0.0rc1
-  - 18.1.0
-  - 19.0.0
-  - 19.0.0.0rc1
-  - 19.0.0.0rc2
-  - 19.0.1
-  - 20.0.0
-  - 20.0.0.0rc1
-  - 20.0.1
-  - 21.0.0
-  - 21.0.0.0rc1
-  - 21.0.1
-  - 22.0.0
-  - 22.0.0.0rc1
-  - 22.0.1
-  - 22.0.2
-  - 23.0.0
-  - 23.0.0.0rc1
-  - 23.0.1
-  - 23.0.2
-  - 24.0.0
-  - 24.0.0.0rc1
-  - 25.0.0
-  - 25.0.0.0rc1
-  - 26.0.0
-  - 26.0.0.0rc1
 aliases:
 - CVE-2014-2828
+- GHSA-6mv3-p2gr-wgqf
 details: The V3 API in OpenStack Identity (Keystone) 2013.1 before 2013.2.4 and icehouse
   before icehouse-rc2 allows remote attackers to cause a denial of service (CPU consumption)
   via a large number of the same authentication method in a request, aka "authentication
   chaining."
 id: PYSEC-2014-106
-modified: '2024-11-21T14:22:52.734949Z'
+modified: '2024-11-25T18:35:18.357593Z'
 published: '2014-04-15T14:55:00Z'
 references:
 - type: WEB
@@ -73,4 +25,3 @@ references:
   url: https://bugs.launchpad.net/keystone/+bug/1300274
 - type: ADVISORY
   url: http://rhn.redhat.com/errata/RHSA-2014-1688.html
-withdrawn: '2024-11-22T04:37:04Z'

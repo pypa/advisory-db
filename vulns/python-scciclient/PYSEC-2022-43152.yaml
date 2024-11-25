@@ -6,6 +6,7 @@ affected:
   ranges:
   - events:
     - introduced: '0'
+    - fixed: 0.12.0
     type: ECOSYSTEM
   versions:
   - 0.0.1
@@ -18,14 +19,6 @@ affected:
   - 0.11.2
   - 0.11.3
   - 0.11.4
-  - 0.12.0
-  - 0.12.1
-  - 0.12.2
-  - 0.12.3
-  - 0.13.0
-  - 0.14.0
-  - 0.15.0
-  - 0.16.0
   - 0.2.0
   - 0.3.0
   - 0.3.1
@@ -55,11 +48,12 @@ affected:
   - 0.9.5
 aliases:
 - CVE-2022-2996
+- GHSA-rf3f-3p37-2qh4
 details: A flaw was found in the python-scciclient when making an HTTPS connection
   to a server where the server's certificate would not be verified. This issue opens
   up the connection to possible Man-in-the-middle (MITM) attacks.
 id: PYSEC-2022-43152
-modified: '2024-11-21T14:23:00.061403Z'
+modified: '2024-11-25T18:35:18.357593Z'
 published: '2022-09-01T18:15:00Z'
 references:
 - type: FIX
@@ -73,4 +67,3 @@ references:
 severity:
 - score: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N
   type: CVSS_V3
-withdrawn: '2024-11-22T04:37:05Z'

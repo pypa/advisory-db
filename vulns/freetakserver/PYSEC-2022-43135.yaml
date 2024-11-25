@@ -6,6 +6,7 @@ affected:
   ranges:
   - events:
     - introduced: '0'
+    - fixed: 1.9.8.5
     type: ECOSYSTEM
   versions:
   - 0.0.1.5
@@ -99,35 +100,13 @@ affected:
   - 1.9.6.1
   - 1.9.7
   - 1.9.8
-  - 1.9.8.5
-  - 1.9.8.6
-  - 1.9.8.7
-  - 1.9.8.8
-  - 1.9.9
-  - 1.9.9.1
-  - 1.9.9.1.0.1
-  - 1.9.9.2
-  - 1.9.9.3
-  - 1.9.9.4
-  - 1.9.9.5
-  - 1.9.9.6
-  - 2.0.21
-  - 2.0.66
-  - 2.0.69
-  - '2.1'
-  - 2.1.1
-  - 2.1.2
-  - 2.1.3
-  - 2.1.4.5
-  - '2.2'
-  - 2.2.0.1
-  - 2.2.1
 aliases:
 - CVE-2022-25510
+- GHSA-f897-875p-23x7
 details: FreeTAKServer 1.9.8 contains a hardcoded Flask secret key which allows attackers
   to create crafted cookies to bypass authentication or escalate privileges.
 id: PYSEC-2022-43135
-modified: '2024-11-21T14:22:50.654358Z'
+modified: '2024-11-25T18:35:18.357593Z'
 published: '2022-03-11T00:15:00Z'
 references:
 - type: EVIDENCE
@@ -137,4 +116,3 @@ references:
 severity:
 - score: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
   type: CVSS_V3
-withdrawn: '2024-11-22T04:37:04Z'

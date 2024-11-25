@@ -6,86 +6,16 @@ affected:
   ranges:
   - events:
     - introduced: '0'
+    - last_affected: 11.0.0
     type: ECOSYSTEM
-  versions:
-  - 15.0.2
-  - 17.0.1
-  - 18.0.0
-  - 18.0.0.0b1
-  - 18.0.0.0rc1
-  - 18.0.1
-  - 19.0.0
-  - 19.0.0.0b1
-  - 19.0.0.0rc1
-  - 19.0.0.0rc2
-  - 19.0.1
-  - 19.0.2
-  - 19.0.3
-  - 19.0.4
-  - 20.0.0
-  - 20.0.0.0b1
-  - 20.0.0.0b2
-  - 20.0.0.0b3
-  - 20.0.0.0rc1
-  - 20.0.0.0rc2
-  - 20.0.1
-  - 20.1.0
-  - 20.2.0
-  - 21.0.0
-  - 21.0.0.0b1
-  - 21.0.0.0b2
-  - 21.0.0.0rc1
-  - 21.0.0.0rc2
-  - 21.1.0
-  - 22.0.0
-  - 22.0.0.0b2
-  - 22.0.0.0b3
-  - 22.0.0.0rc1
-  - 22.1.0
-  - 22.1.1
-  - 23.0.0
-  - 23.0.0.0b2
-  - 23.0.0.0b3
-  - 23.0.0.0rc1
-  - 23.0.0.0rc2
-  - 23.1.0
-  - 24.0.0
-  - 24.0.0.0rc1
-  - 24.1.0
-  - 24.2.0
-  - 24.2.1
-  - 25.0.0
-  - 25.0.0.0b2
-  - 25.0.0.0b3
-  - 25.0.0.0rc1
-  - 25.1.0
-  - 26.0.0
-  - 26.0.0.0b2
-  - 26.0.0.0b3
-  - 26.0.0.0rc1
-  - 26.1.0
-  - 27.0.0
-  - 27.0.0.0b1
-  - 27.0.0.0b2
-  - 27.0.0.0rc1
-  - 27.1.0
-  - 28.0.0
-  - 28.0.0.0b2
-  - 28.0.0.0rc1
-  - 28.0.1
-  - 28.1.0
-  - 29.0.0
-  - 29.0.0.0b1
-  - 29.0.0.0b2
-  - 29.0.0.0b3
-  - 29.0.0.0rc1
 aliases:
 - CVE-2015-8234
+- GHSA-wmhw-fvg9-87fc
 details: The image signature algorithm in OpenStack Glance 11.0.0 allows remote attackers
   to bypass the signature verification process via a crafted image, which triggers
   an MD5 collision.
 id: PYSEC-2017-143
-modified: '2024-11-21T14:22:51.45285Z'
+modified: '2024-11-25T18:35:18.357593Z'
 published: '2017-03-29T14:59:00Z'
 references:
 - type: WEB
@@ -103,4 +33,3 @@ references:
 severity:
 - score: CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N
   type: CVSS_V3
-withdrawn: '2024-11-22T04:37:04Z'

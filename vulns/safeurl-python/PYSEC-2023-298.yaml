@@ -6,18 +6,33 @@ affected:
   ranges:
   - events:
     - introduced: '0'
+    - fixed: '1.2'
     type: ECOSYSTEM
   versions:
   - '1.0'
-  - '1.2'
-  - '1.3'
+- package:
+    ecosystem: PyPI
+    name: safeurl-python
+  ranges:
+  - events:
+    - introduced: '0'
+    - fixed: '1.2'
+    type: ECOSYSTEM
+- package:
+    ecosystem: PyPI
+    name: safeurl-python
+  ranges:
+  - events:
+    - introduced: '0'
+    - fixed: '1.2'
+    type: ECOSYSTEM
 aliases:
 - CVE-2023-24622
 - GHSA-jgh8-vchw-q3g7
 details: isInList in the safeurl-python package before 1.2 for Python has an insufficiently
   restrictive regular expression for external domains, leading to SSRF.
 id: PYSEC-2023-298
-modified: '2024-11-21T14:23:01.045324Z'
+modified: '2024-11-25T18:35:18.357593Z'
 published: '2023-01-30T05:15:00Z'
 references:
 - type: EVIDENCE
@@ -27,4 +42,3 @@ references:
 severity:
 - score: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N
   type: CVSS_V3
-withdrawn: '2024-11-22T04:37:05Z'

@@ -6,6 +6,7 @@ affected:
   ranges:
   - events:
     - introduced: '0'
+    - last_affected: 2.4.4rc3
     type: ECOSYSTEM
   versions:
   - '0.1'
@@ -190,12 +191,12 @@ affected:
   - 2.4.3rc1
   - 2.4.3rc2
   - 2.4.3rc3
-  - 2.4.4
   - 2.4.4rc1
   - 2.4.4rc2
   - 2.4.4rc3
 aliases:
 - CVE-2022-36447
+- GHSA-pvjg-jwp3-mrj5
 details: An inflation issue was discovered in Chia Network CAT1 Standard 1.0.0. Previously
   minted tokens minted on the Chia blockchain using the CAT1 standard can be inflated
   to an arbitrary extent by any holder of any amount of the token. The total amount
@@ -204,7 +205,7 @@ details: An inflation issue was discovered in Chia Network CAT1 Standard 1.0.0. 
   is auditable on chain, so maliciously altered coins can potentially be marked by
   off-chain observers as malicious.
 id: PYSEC-2022-43072
-modified: '2024-11-21T14:22:41.861085Z'
+modified: '2024-11-25T18:33:04.123836Z'
 published: '2022-07-29T21:15:00Z'
 references:
 - type: ADVISORY
@@ -214,4 +215,3 @@ references:
 severity:
 - score: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N
   type: CVSS_V3
-withdrawn: '2024-11-22T04:37:03Z'

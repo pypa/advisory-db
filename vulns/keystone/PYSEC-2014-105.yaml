@@ -6,66 +6,18 @@ affected:
   ranges:
   - events:
     - introduced: '0'
+    - fixed: 8.0.0a0
     type: ECOSYSTEM
-  versions:
-  - 12.0.2
-  - 12.0.3
-  - 13.0.2
-  - 13.0.3
-  - 13.0.4
-  - 14.0.0
-  - 14.0.1
-  - 14.1.0
-  - 14.2.0
-  - 15.0.0
-  - 15.0.0.0rc1
-  - 15.0.0.0rc2
-  - 15.0.1
-  - 16.0.0
-  - 16.0.0.0rc1
-  - 16.0.0.0rc2
-  - 16.0.1
-  - 16.0.2
-  - 17.0.0
-  - 17.0.0.0rc1
-  - 17.0.0.0rc2
-  - 17.0.1
-  - 18.0.0
-  - 18.0.0.0rc1
-  - 18.1.0
-  - 19.0.0
-  - 19.0.0.0rc1
-  - 19.0.0.0rc2
-  - 19.0.1
-  - 20.0.0
-  - 20.0.0.0rc1
-  - 20.0.1
-  - 21.0.0
-  - 21.0.0.0rc1
-  - 21.0.1
-  - 22.0.0
-  - 22.0.0.0rc1
-  - 22.0.1
-  - 22.0.2
-  - 23.0.0
-  - 23.0.0.0rc1
-  - 23.0.1
-  - 23.0.2
-  - 24.0.0
-  - 24.0.0.0rc1
-  - 25.0.0
-  - 25.0.0.0rc1
-  - 26.0.0
-  - 26.0.0.0rc1
 aliases:
 - CVE-2014-2237
+- GHSA-23x9-8hxr-978c
 details: The memcache token backend in OpenStack Identity (Keystone) 2013.1 through
   2.013.1.4, 2013.2 through 2013.2.2, and icehouse before icehouse-3, when issuing
   a trust token with impersonation enabled, does not include this token in the trustee's
   token-index-list, which prevents the token from being invalidated by bulk token
   revocation and allows the trustee to bypass intended access restrictions.
 id: PYSEC-2014-105
-modified: '2024-11-21T14:22:52.681779Z'
+modified: '2024-11-25T18:35:18.357593Z'
 published: '2014-04-01T06:35:00Z'
 references:
 - type: WEB
@@ -76,4 +28,3 @@ references:
   url: http://rhn.redhat.com/errata/RHSA-2014-0580.html
 - type: WEB
   url: http://www.securityfocus.com/bid/65895
-withdrawn: '2024-11-22T04:37:04Z'

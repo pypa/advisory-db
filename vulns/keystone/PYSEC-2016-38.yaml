@@ -5,65 +5,17 @@ affected:
     purl: pkg:pypi/keystone
   ranges:
   - events:
-    - introduced: '0'
+    - introduced: 9.0.0
+    - fixed: 9.0.1
     type: ECOSYSTEM
-  versions:
-  - 12.0.2
-  - 12.0.3
-  - 13.0.2
-  - 13.0.3
-  - 13.0.4
-  - 14.0.0
-  - 14.0.1
-  - 14.1.0
-  - 14.2.0
-  - 15.0.0
-  - 15.0.0.0rc1
-  - 15.0.0.0rc2
-  - 15.0.1
-  - 16.0.0
-  - 16.0.0.0rc1
-  - 16.0.0.0rc2
-  - 16.0.1
-  - 16.0.2
-  - 17.0.0
-  - 17.0.0.0rc1
-  - 17.0.0.0rc2
-  - 17.0.1
-  - 18.0.0
-  - 18.0.0.0rc1
-  - 18.1.0
-  - 19.0.0
-  - 19.0.0.0rc1
-  - 19.0.0.0rc2
-  - 19.0.1
-  - 20.0.0
-  - 20.0.0.0rc1
-  - 20.0.1
-  - 21.0.0
-  - 21.0.0.0rc1
-  - 21.0.1
-  - 22.0.0
-  - 22.0.0.0rc1
-  - 22.0.1
-  - 22.0.2
-  - 23.0.0
-  - 23.0.0.0rc1
-  - 23.0.1
-  - 23.0.2
-  - 24.0.0
-  - 24.0.0.0rc1
-  - 25.0.0
-  - 25.0.0.0rc1
-  - 26.0.0
-  - 26.0.0.0rc1
 aliases:
 - CVE-2016-4911
+- GHSA-f82m-w3p3-cgp3
 details: The Fernet Token Provider in OpenStack Identity (Keystone) 9.0.x before 9.0.1
   (mitaka) allows remote authenticated users to prevent revocation of a chain of tokens
   and bypass intended access restrictions by rescoping a token.
 id: PYSEC-2016-38
-modified: '2024-11-21T14:22:52.950772Z'
+modified: '2024-11-25T18:35:18.357593Z'
 published: '2016-06-13T14:59:00Z'
 references:
 - type: ARTICLE
@@ -85,4 +37,3 @@ references:
 severity:
 - score: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N
   type: CVSS_V3
-withdrawn: '2024-11-22T04:37:04Z'

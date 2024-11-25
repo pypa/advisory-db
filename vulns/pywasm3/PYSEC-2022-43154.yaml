@@ -6,6 +6,7 @@ affected:
   ranges:
   - events:
     - introduced: '0'
+    - last_affected: 0.5.0
     type: ECOSYSTEM
   versions:
   - 0.0.1
@@ -15,10 +16,11 @@ affected:
   - 0.5.0
 aliases:
 - CVE-2022-28990
+- GHSA-77fq-4xf5-hph4
 details: WASM3 v0.5.0 was discovered to contain a heap overflow via the component
   /wabt/bin/poc.wasm.
 id: PYSEC-2022-43154
-modified: '2024-11-21T14:23:00.161107Z'
+modified: '2024-11-25T18:35:18.357593Z'
 published: '2022-05-20T19:15:00Z'
 references:
 - type: EVIDENCE
@@ -32,4 +34,3 @@ references:
 severity:
 - score: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
   type: CVSS_V3
-withdrawn: '2024-11-22T04:37:05Z'

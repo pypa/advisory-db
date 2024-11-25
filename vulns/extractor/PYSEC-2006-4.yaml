@@ -3,20 +3,17 @@ affected:
     ecosystem: PyPI
     name: extractor
     purl: pkg:pypi/extractor
-  ranges:
-  - events:
-    - introduced: '0'
-    type: ECOSYSTEM
   versions:
   - '0.5'
 aliases:
 - CVE-2006-2458
+- GHSA-f836-7jqw-3684
 details: Multiple heap-based buffer overflows in Libextractor 0.5.13 and earlier allow
   remote attackers to execute arbitrary code via (1) the asf_read_header function
   in the ASF plugin (plugins/asfextractor.c), and (2) the parse_trak_atom function
   in the QT plugin (plugins/qtextractor.c).
 id: PYSEC-2006-4
-modified: '2024-11-21T14:22:50.369284Z'
+modified: '2024-11-25T22:09:33.909779Z'
 published: '2006-05-18T23:02:00Z'
 references:
 - type: EVIDENCE
@@ -55,4 +52,3 @@ references:
   url: https://exchange.xforce.ibmcloud.com/vulnerabilities/26531
 - type: WEB
   url: http://www.securityfocus.com/archive/1/434288/100/0/threaded
-withdrawn: '2024-11-22T04:37:04Z'

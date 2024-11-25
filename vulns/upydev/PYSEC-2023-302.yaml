@@ -6,6 +6,7 @@ affected:
   ranges:
   - events:
     - introduced: '0'
+    - last_affected: 0.4.3
     type: ECOSYSTEM
   versions:
   - 0.0.1
@@ -53,10 +54,11 @@ affected:
   - 0.4.3
 aliases:
 - CVE-2023-48051
+- GHSA-qc4j-hrj6-cppf
 details: An issue in /upydev/keygen.py in upydev v0.4.3 allows attackers to decrypt
   sensitive information via weak encryption padding.
 id: PYSEC-2023-302
-modified: '2024-11-21T14:23:02.508814Z'
+modified: '2024-11-25T18:35:18.357593Z'
 published: '2023-11-20T23:15:00Z'
 references:
 - type: EVIDENCE
@@ -66,4 +68,3 @@ references:
 severity:
 - score: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
   type: CVSS_V3
-withdrawn: '2024-11-22T04:37:05Z'

@@ -12,10 +12,11 @@ affected:
   - '0.9'
 aliases:
 - CVE-2022-44940
+- GHSA-5pcj-3m26-w633
 details: Patchelf v0.9 was discovered to contain an out-of-bounds read via the function
   modifyRPath at src/patchelf.cc.
 id: PYSEC-2022-43151
-modified: '2024-11-21T14:22:59.956918Z'
+modified: '2024-11-25T22:09:33.909779Z'
 published: '2022-12-19T22:15:00Z'
 references:
 - type: EVIDENCE
@@ -27,4 +28,3 @@ references:
 severity:
 - score: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H
   type: CVSS_V3
-withdrawn: '2024-11-22T04:37:05Z'

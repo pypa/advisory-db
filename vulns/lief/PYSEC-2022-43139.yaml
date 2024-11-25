@@ -6,6 +6,7 @@ affected:
   ranges:
   - events:
     - introduced: '0'
+    - last_affected: 0.12.1
     type: ECOSYSTEM
   versions:
   - 0.10.0
@@ -18,15 +19,6 @@ affected:
   - 0.11.5
   - 0.12.0
   - 0.12.1
-  - 0.12.2
-  - 0.12.3
-  - 0.13.0
-  - 0.13.1
-  - 0.13.2
-  - 0.14.0
-  - 0.14.1
-  - 0.15.0
-  - 0.15.1
   - 0.8.0
   - 0.8.1
   - 0.8.2
@@ -34,11 +26,12 @@ affected:
   - 0.9.0
 aliases:
 - CVE-2022-40923
+- GHSA-rm2x-hgr8-w343
 details: A vulnerability in the LIEF::MachO::SegmentCommand::virtual_address function
   of LIEF v0.12.1 allows attackers to cause a denial of service (DOS) through a segmentation
   fault via a crafted MachO file.
 id: PYSEC-2022-43139
-modified: '2024-11-21T14:22:53.968694Z'
+modified: '2024-11-25T18:35:18.357593Z'
 published: '2022-09-30T19:15:00Z'
 references:
 - type: EVIDENCE
@@ -50,4 +43,3 @@ references:
 severity:
 - score: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H
   type: CVSS_V3
-withdrawn: '2024-11-22T04:37:04Z'

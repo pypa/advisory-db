@@ -6,33 +6,20 @@ affected:
   ranges:
   - events:
     - introduced: '0'
+    - fixed: 14.10.1
     type: ECOSYSTEM
-  versions:
-  - 20.5.0
-  - 20.9.0
-  - 21.9.0
-  - 22.1.1
-  - 23.0.1
-  - 23.0.2
-  - 23.0.3
-  - 23.0.4
-  - 23.0.5
-  - 23.0.6
-  - 23.1.1
-  - 23.1.2
-  - 23.1.3
-  - 23.1.4
-  - 23.1.dev0
-  - 23.2.1
-  - 24.0.0
-  - 24.0.1
-  - 24.0.2
-  - 24.0.3
-  - 24.1.1
-  - 24.1.2
-  - 24.1.3
+- package:
+    ecosystem: PyPI
+    name: galaxy-app
+    purl: pkg:pypi/galaxy-app
+  ranges:
+  - events:
+    - introduced: '15.0'
+    - fixed: '15.01'
+    type: ECOSYSTEM
 aliases:
 - CVE-2018-1000516
+- GHSA-qqr6-vm23-m488
 details: 'The Galaxy Project Galaxy version v14.10 contains a CWE-79: Improper Neutralization
   of Input During Web Page Generation vulnerability in Many templates used in the
   Galaxy server did not properly sanitize user''s input, which would allow for cross-site
@@ -43,7 +30,7 @@ details: 'The Galaxy Project Galaxy version v14.10 contains a CWE-79: Improper N
   component on page witch contains injected JavaScript code.. This vulnerability appears
   to have been fixed in v14.10.1, v15.01.'
 id: PYSEC-2018-149
-modified: '2024-11-21T14:22:50.762055Z'
+modified: '2024-11-25T18:35:18.357593Z'
 published: '2018-06-26T16:29:00Z'
 references:
 - type: ADVISORY
@@ -51,4 +38,3 @@ references:
 severity:
 - score: CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
   type: CVSS_V3
-withdrawn: '2024-11-22T04:37:04Z'

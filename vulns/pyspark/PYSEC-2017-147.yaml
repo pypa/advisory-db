@@ -6,59 +6,13 @@ affected:
   ranges:
   - events:
     - introduced: '0'
+    - fixed: 2.1.2
     type: ECOSYSTEM
   versions:
   - 2.1.1
-  - 2.1.2
-  - 2.1.3
-  - 2.2.0
-  - 2.2.1
-  - 2.2.2
-  - 2.2.3
-  - 2.3.0
-  - 2.3.1
-  - 2.3.2
-  - 2.3.3
-  - 2.3.4
-  - 2.4.0
-  - 2.4.1
-  - 2.4.2
-  - 2.4.3
-  - 2.4.4
-  - 2.4.5
-  - 2.4.6
-  - 2.4.7
-  - 2.4.8
-  - 3.0.0
-  - 3.0.1
-  - 3.0.2
-  - 3.0.3
-  - 3.1.1
-  - 3.1.2
-  - 3.1.3
-  - 3.2.0
-  - 3.2.1
-  - 3.2.2
-  - 3.2.3
-  - 3.2.4
-  - 3.3.0
-  - 3.3.1
-  - 3.3.2
-  - 3.3.3
-  - 3.3.4
-  - 3.4.0
-  - 3.4.1
-  - 3.4.2
-  - 3.4.3
-  - 3.4.4
-  - 3.5.0
-  - 3.5.1
-  - 3.5.2
-  - 3.5.3
-  - 4.0.0.dev1
-  - 4.0.0.dev2
 aliases:
 - CVE-2017-12612
+- GHSA-8rhc-48pp-52gr
 details: In Apache Spark 1.6.0 until 2.1.1, the launcher API performs unsafe deserialization
   of data received by its socket. This makes applications launched programmatically
   using the launcher API potentially vulnerable to arbitrary code execution by an
@@ -67,7 +21,7 @@ details: In Apache Spark 1.6.0 until 2.1.1, the launcher API performs unsafe des
   as the user that ran the Spark application. Users are encouraged to update to version
   2.2.0 or later.
 id: PYSEC-2017-147
-modified: '2024-11-21T14:23:00.007173Z'
+modified: '2024-11-25T18:35:18.357593Z'
 published: '2017-09-13T16:29:00Z'
 references:
 - type: ARTICLE
@@ -81,4 +35,3 @@ references:
 severity:
 - score: CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
   type: CVSS_V3
-withdrawn: '2024-11-22T04:37:05Z'
