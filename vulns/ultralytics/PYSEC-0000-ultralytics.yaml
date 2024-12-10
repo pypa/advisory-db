@@ -1,0 +1,50 @@
+# TODO: Fill in the details below, and remove any comments prior to committing.
+# See https://ossf.github.io/osv-schema/ for format and field descriptions.
+id: PYSEC-0000-ultralytics.yaml
+modified: 2024-12-10T16:51:23Z
+summary: A number of releases of ultralytics contained malicious crypto miner software.
+details: |
+  Ultralytics has identified a supply chain attack
+  affecting affecting multiple versions of the ultralytics package.
+  The compromised versions contained unauthorized code that
+  downloaded and executed cryptocurrency mining software
+  when instantiating YOLO models.
+  This code was injected into the PyPI release artifacts and was not present
+  in the public GitHub repository.
+affected:
+- package:
+    ecosystem: PyPI
+    name: ultralytics
+    purl: pkg:pypi/ultralytics
+  versions:
+  - "8.3.41"
+  - "8.3.42"
+  - "8.3.45"
+  - "8.3.46"
+  ranges:
+  - type: ECOSYSTEM
+    events:
+      - introduced: "8.3.41"
+      - fixed: "8.3.47"
+severity:
+  - type: CVSS_V3
+    score: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:H/A:N
+  - type: CVSS_V4
+    score: CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N
+related:
+  - GHSA-7x29-qqmq-v6qc
+references:
+- type: EVIDENCE
+  url: https://inspector.pypi.io/project/ultralytics/8.3.41/packages/d0/99/13d92174aa6a470d348a95e31164769f2cdf77838ea3c3e3fd476285777d/ultralytics-8.3.41-py3-none-any.whl/ultralytics/utils/downloads.py#line.284
+- type: WEB
+  url: https://github.com/ultralytics/ultralytics/pull/18020#issuecomment-2525180194
+- type: REPORT
+  url: https://github.com/ultralytics/ultralytics/issues/18027
+- type: FIX
+  url: https://github.com/ultralytics/ultralytics/pull/18052
+- type: FIX
+  url: https://github.com/ultralytics/ultralytics/pull/18111
+- type: FIX
+  url: https://github.com/ultralytics/ultralytics/releases/tag/v8.3.48
+- type: ARTICLE
+  url: https://blog.yossarian.net/2024/12/06/zizmor-ultralytics-injection
