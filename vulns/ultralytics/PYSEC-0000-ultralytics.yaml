@@ -1,5 +1,3 @@
-# TODO: Fill in the details below, and remove any comments prior to committing.
-# See https://ossf.github.io/osv-schema/ for format and field descriptions.
 id: PYSEC-0000-ultralytics.yaml
 modified: 2024-12-10T16:51:23Z
 summary: A number of releases of ultralytics contained malicious crypto miner software.
