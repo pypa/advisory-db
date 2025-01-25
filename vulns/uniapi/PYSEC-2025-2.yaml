@@ -19,6 +19,8 @@ affected:
 references:
 - type: EVIDENCE
   url: https://inspector.pypi.io/project/uniapi/1.0.7/packages/0f/40/c6e06c22bbc22ef45f40bf5a7711763fa08fec4d16b4718d86fd60970131/uniapi-1.0.7.tar.gz/uniapi-1.0.7/uniapi/__init__.py#line.11
+- type: WEB
+  url: https://github.com/kam193/package-campaigns/blob/main/pypi/campaigns/highly_suspicious/2025-01-uniapi.json
 credits:
 - name: Mike Fiedler
   type: COORDINATOR
