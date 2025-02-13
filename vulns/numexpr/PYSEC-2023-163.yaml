@@ -27,6 +27,7 @@ affected:
   - type: ECOSYSTEM
     events:
     - introduced: '0'
+    - fixed: '2.8.5'
   versions:
   - 1.1.1
   - '1.2'
@@ -75,9 +76,6 @@ affected:
   - 2.8.1
   - 2.8.3
   - 2.8.4
-  - 2.8.5
-  - 2.8.6
-  - 2.8.7
 severity:
 - type: CVSS_V3
   score: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
